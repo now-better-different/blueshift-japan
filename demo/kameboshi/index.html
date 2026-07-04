@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex">
 <title>KAMEBOSHI Indigo Atelier — 藍染工房 甕星 | Demo by Blueshift Japan</title>
 <meta name="description" content="A fictional indigo-dyeing atelier website. Demo site designed and built by Blueshift Japan to showcase inbound-ready multilingual web design.">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Zen+Old+Mincho:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Zen+Old+Mincho:wght@400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --koai:#0A1830;      /* 濃藍 deepest indigo */
@@ -21,7 +21,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Cormorant Garamond','Zen Old Mincho',serif;background:var(--kinari);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:'Cormorant Garamond','Zen Old Mincho',serif;color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;background-color:#F5F1E6;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.11 0.006' numOctaves='2' seed='51'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.45 0 0 0 0 0.4 0 0 0 0 0.28 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.006 0.11' numOctaves='2' seed='52'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.45 0 0 0 0 0.4 0 0 0 0 0.28 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='53'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.36 0 0 0 0 0.24 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E")}
 body .jp{font-family:'Zen Old Mincho','Noto Sans JP',serif}
 
 /* ---- language toggle ---- */
@@ -52,16 +52,15 @@ body.en .lang-switch button[data-lang=en],body.ja .lang-switch button[data-lang=
 
 /* ---- hero ---- */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#F2F5F0;overflow:hidden;padding:90px 24px 70px;
-  background:
-    radial-gradient(ellipse 90% 55% at 50% 115%,rgba(42,110,158,.55),transparent 62%),
-    radial-gradient(ellipse 60% 40% at 50% 108%,rgba(162,215,221,.28),transparent 60%),
-    linear-gradient(175deg,#060F22 0%,#0A1830 38%,#0F2350 68%,#165E83 108%)}
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.009 0.014' numOctaves='3' seed='31'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.02 0 0 0 0 0.05 0 0 0 0 0.14 0 0 0 0.3 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+    linear-gradient(175deg,rgba(6,15,34,.90) 0%,rgba(10,24,48,.80) 40%,rgba(15,35,80,.62) 70%,rgba(22,74,110,.55) 108%),
+    url('img/k_shibori.jpg');
+  background-size:auto,auto,cover;background-position:center}
 .hero .stars{position:absolute;inset:0;background-image:
   radial-gradient(rgba(255,255,255,.9) .7px,transparent .9px),
   radial-gradient(rgba(255,255,255,.5) .6px,transparent .8px);
   background-size:190px 160px,97px 83px;background-position:0 0,40px 60px;opacity:.5;pointer-events:none}
-.hero .vat-glow{position:absolute;bottom:-40vh;left:50%;transform:translateX(-50%);width:80vh;height:80vh;border-radius:50%;border:1px solid rgba(162,215,221,.22);background:radial-gradient(circle at 50% 38%,rgba(162,215,221,.14),rgba(10,24,48,.1) 70%);pointer-events:none}
-.hero .vat-glow::before{content:'';position:absolute;inset:9%;border-radius:50%;border:1px solid rgba(162,215,221,.13)}
 .hero>*{position:relative;z-index:1}
 .hero-kicker{font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.42em;text-indent:.42em;color:var(--kame);margin-bottom:30px;font-weight:500}
 .hero h1{font-weight:600;line-height:1.1;margin-bottom:26px}
@@ -89,6 +88,9 @@ body.en .lang-switch button[data-lang=en],body.ja .lang-switch button[data-lang=
 body.en .sec-head .sec-lead{font-family:'Cormorant Garamond',serif;font-size:17.5px;line-height:1.85}
 
 /* ---- story ---- */
+.story-photo{margin:0}
+.story-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px;display:block;box-shadow:0 26px 54px -26px rgba(10,24,48,.55)}
+.story-photo figcaption{text-align:center;font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin-top:12px}
 .story-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center}
 .story-visual{aspect-ratio:3/4;border-radius:4px;position:relative;overflow:hidden;
   background:
@@ -122,7 +124,7 @@ body.ja .story-text p{font-family:'Noto Sans JP',sans-serif;font-size:14.5px;lin
 body.en .shade-note{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;letter-spacing:.03em}
 
 /* ---- process ---- */
-.process{background:linear-gradient(178deg,#0A1830 0%,#0F2350 55%,#13355C 100%);color:#F2F5F0;position:relative;overflow:hidden}
+.process{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.009 0.014' numOctaves='3' seed='31'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.02 0 0 0 0 0.05 0 0 0 0 0.14 0 0 0 0.3 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.014 0.02' numOctaves='3' seed='47'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.63 0 0 0 0 0.72 0 0 0 0 0.84 0 0 0 0.1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),linear-gradient(178deg,#0A1830 0%,#0F2350 55%,#13355C 100%);color:#F2F5F0;position:relative;overflow:hidden}
 .process::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.5) .6px,transparent .8px);background-size:150px 120px;opacity:.3;pointer-events:none}
 .process .wrap{position:relative;z-index:1}
 .process .sec-head h2{color:#F2F5F0}
@@ -151,6 +153,8 @@ body.en .proc-step p{font-family:'Cormorant Garamond',serif;font-size:15px;line-
 .prod-card{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:transform .25s,box-shadow .25s}
 .prod-card:hover{transform:translateY(-5px);box-shadow:0 22px 44px -20px rgba(15,35,80,.35)}
 .prod-swatch{aspect-ratio:1;position:relative}
+.prod-swatch::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.016 0.024' numOctaves='3' seed='61'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.85 0 0 0 0 0.9 0 0 0 0 0.96 0 0 0 0.16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E");pointer-events:none}
+.prod-swatch.photo{background-size:cover;background-position:center}
 .prod-swatch.shibori{background:
   radial-gradient(circle 9px at 25% 25%,#EAF4F6 3px,rgba(234,244,246,.25) 6px,transparent 9px),
   radial-gradient(circle 9px at 75% 25%,#EAF4F6 3px,rgba(234,244,246,.25) 6px,transparent 9px),
@@ -173,6 +177,9 @@ body.en .prod-info p{font-family:'Cormorant Garamond',serif;font-size:14.5px;lin
 .prod-note{text-align:center;font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--muted);margin-top:26px;letter-spacing:.06em}
 
 /* ---- experience ---- */
+.exp-photo{margin:0}
+.exp-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;display:block;box-shadow:0 26px 54px -26px rgba(10,24,48,.45)}
+.exp-photo figcaption{text-align:center;font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.14em;color:var(--muted);margin-top:12px}
 .exp{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .exp-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
 .exp-visual{aspect-ratio:4/3;border-radius:4px;position:relative;overflow:hidden;
@@ -214,7 +221,7 @@ body.ja .exp-copy>p{font-family:'Noto Sans JP',sans-serif;font-size:14px;line-he
 .visit-map figcaption{position:absolute;bottom:12px;right:14px;font-family:'Noto Sans JP',sans-serif;font-size:10px;color:var(--muted);letter-spacing:.1em}
 
 /* ---- footer ---- */
-.site-footer{background:#0A1830;color:rgba(242,245,240,.6);padding:64px 28px 92px;text-align:center;position:relative;overflow:hidden}
+.site-footer{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.009 0.014' numOctaves='3' seed='31'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.02 0 0 0 0 0.05 0 0 0 0 0.14 0 0 0 0.3 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),linear-gradient(#0A1830,#0A1830);color:rgba(242,245,240,.6);padding:64px 28px 92px;text-align:center;position:relative;overflow:hidden}
 .site-footer::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.5) .6px,transparent .8px);background-size:160px 130px;opacity:.25;pointer-events:none}
 .site-footer>*{position:relative;z-index:1}
 .footer-mark{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(162,215,221,.6);margin:0 auto 18px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 40% 32%,rgba(162,215,221,.3),rgba(10,24,48,.2) 70%)}
@@ -240,6 +247,44 @@ body.ja .exp-copy>p{font-family:'Noto Sans JP',sans-serif;font-size:14px;line-he
   .shade-band{height:100px}
   .exp-en-ok{margin-left:0;margin-top:12px;display:flex}
 }
+/* 可読性: 文字サイズ底上げ + 和文本文を明朝に統一 */
+body{font-weight:500}
+.nav-links a{font-size:14.5px}
+.lang-switch button{font-size:12.5px;padding:7px 15px}
+.demo-ribbon{font-size:13px;padding:11px 16px}
+.hero-kicker{font-size:13.5px}
+.hero-tag{font-size:24px}
+.hero-tag.jp{font-size:19px}
+.hero-sub{font-size:15px;color:rgba(242,245,240,.72)}
+.sec-head .sec-lead{font-size:16px;color:#4A5A70}
+body.en .sec-head .sec-lead{font-size:19px}
+.story-text p{font-size:18.5px}
+body.ja .story-text p{font-size:15.5px}
+.sf-num{font-size:28px}
+.sf-label{font-size:12px}
+.shade-note{font-size:14px}
+body.en .shade-note{font-size:16.5px}
+.proc-step h3{font-size:20px}
+.proc-step h3.jp{font-size:18px}
+.proc-jp{font-size:12px}
+.proc-step p{font-size:14.5px;color:rgba(242,245,240,.78)}
+body.en .proc-step p{font-size:16.5px}
+.proc-quote{font-size:25px}
+.proc-quote.jp{font-size:20px}
+.prod-info h3{font-size:21px}
+.prod-info .p-jp{font-size:12px}
+.prod-info p{font-size:13.5px}
+body.en .prod-info p{font-size:15.5px}
+.prod-price{font-size:17.5px}
+.prod-note{font-size:13.5px}
+.exp-copy>p{font-size:18.5px}
+body.ja .exp-copy>p{font-size:15px}
+.exp-detail dl{font-size:14.5px}
+.exp-en-ok{font-size:12.5px}
+.visit-table th,.visit-table td{font-size:15px}
+.footer-addr{font-size:13px}
+.footer-credit{font-size:13.5px}
+body.ja .sec-head .sec-lead,body.ja .proc-step p,body.ja .prod-info p,body.ja .exp-copy>p,body.ja .exp-detail dd,body.ja .visit-table td,body.ja .story-text p,body.ja .shade-note{font-family:'Zen Old Mincho','Noto Sans JP',serif;font-weight:500}
 </style>
 </head>
 <body class="en">
@@ -267,7 +312,6 @@ body.ja .exp-copy>p{font-family:'Noto Sans JP',sans-serif;font-size:14px;line-he
 <!-- HERO -->
 <header class="hero">
   <div class="stars"></div>
-  <div class="vat-glow"></div>
   <div class="hero-kicker"><span class="en">INDIGO DYEING ATELIER — EST. 1892</span><span class="ja">創業明治二十五年 — 藍染工房</span></div>
   <h1>
     <span class="en en-title">KAMEBOSHI</span>
@@ -291,10 +335,9 @@ body.ja .exp-copy>p{font-family:'Noto Sans JP',sans-serif;font-size:14px;line-he
       <h2><span class="en">The color the world calls Japan Blue</span><span class="ja jp" style="font-family:'Zen Old Mincho',serif">世界が「ジャパン・ブルー」と<br>呼んだ色</span></h2>
     </div>
     <div class="story-grid">
-      <figure class="story-visual">
-        <div class="vat"></div>
-        <div class="star"></div>
-        <figcaption><span class="en">THE DYE VAT AT NIGHT</span><span class="ja">夜の藍甕</span></figcaption>
+      <figure class="story-photo">
+        <img src="img/k_vat.jpg" alt="藍甕から引き上げられた染め布">
+        <figcaption><span class="en">FRESH FROM THE VAT — THE BLUE STILL BREATHING</span><span class="ja">甕から上がったばかりの、呼吸する藍</span></figcaption>
       </figure>
       <div class="story-text">
         <h3 class="en">Four generations,<br>twelve living vats.</h3>
@@ -400,11 +443,11 @@ body.ja .exp-copy>p{font-family:'Noto Sans JP',sans-serif;font-size:14px;line-he
         </div>
       </div>
       <div class="prod-card">
-        <div class="prod-swatch stripe"></div>
+        <div class="prod-swatch photo" style="background-image:url('img/k_noren.jpg')"></div>
         <div class="prod-info">
           <h3><span class="en">Noren</span><span class="ja jp">暖簾</span></h3>
-          <div class="p-jp"><span class="en">DOORWAY CURTAIN</span><span class="ja">縞染め</span></div>
-          <p><span class="en">A striped doorway curtain that turns any entrance into a threshold.</span><span class="ja">くぐるたびに背筋が伸びる、玄関の一枚。</span></p>
+          <div class="p-jp"><span class="en">DOORWAY CURTAIN</span><span class="ja">誂え染め</span></div>
+          <p><span class="en">An indigo doorway curtain, dyed to order — every entrance becomes a threshold.</span><span class="ja">一枚ずつ誂え染め。くぐるたびに背筋が伸びる、玄関の顔。</span></p>
           <div class="prod-price">¥19,800</div>
         </div>
       </div>
@@ -426,8 +469,9 @@ body.ja .exp-copy>p{font-family:'Noto Sans JP',sans-serif;font-size:14px;line-he
 <section class="section exp" id="experience">
   <div class="wrap">
     <div class="exp-grid">
-      <figure class="exp-visual">
-        <figcaption><span class="en">YOUR TENUGUI, MEETING THE AIR</span><span class="ja">あなたの一枚が、風に触れる瞬間</span></figcaption>
+      <figure class="exp-photo">
+        <img src="img/k_cloth.jpg" alt="藍染の反物と小物が並ぶ工房の棚">
+        <figcaption><span class="en">THE ATELIER SHELVES — EVERY BOLT A DIFFERENT BLUE</span><span class="ja">工房の棚——一反ごとに、違う青</span></figcaption>
       </figure>
       <div class="exp-copy">
         <div class="sec-kicker" style="text-align:left;text-indent:0"><span class="en">THE EXPERIENCE</span><span class="ja">藍染体験</span></div>
@@ -484,6 +528,7 @@ body.ja .exp-copy>p{font-family:'Noto Sans JP',sans-serif;font-size:14px;line-he
   <div class="footer-mark"><i></i></div>
   <div class="footer-name"><span class="en">KAMEBOSHI</span><span class="jp ja">藍染工房 甕星</span></div>
   <p class="footer-addr"><span class="en">Indigo Dyeing Atelier · Tokushima, Japan · Est. 1892 (fictional)</span><span class="ja">藍染工房 甕星 · 徳島 · 創業明治二十五年（架空）</span></p>
+  <p style="font-family:'Noto Sans JP',sans-serif;font-size:11.5px;color:rgba(242,245,240,.45);letter-spacing:.06em;margin-bottom:22px">Photos: Wikimedia Commons — ©Katie (CC BY-SA 2.0), ©Markmcnbowe97 (CC BY-SA 4.0), ©Jyo81 (CC BY 3.0), Honolulu Museum of Art (CC0) — color-graded by Blueshift Japan</p>
   <div class="footer-credit">
     <span class="en"><strong>This is a demo website.</strong> "Kameboshi" is a fictional atelier created to showcase our inbound-ready web design.<br>Designed & built by <a href="/ja/">Blueshift Japan</a> — websites that bridge local Japan and the world.</span>
     <span class="ja"><strong>このサイトはデモサイトです。</strong>「藍染工房 甕星」は制作品質をご覧いただくための架空の工房です。<br>企画・制作：<a href="/ja/">Blueshift Japan合同会社</a> — 地域と世界をつなぐWeb制作</span>
