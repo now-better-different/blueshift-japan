@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://blueshift-japan.com/sample_verdex_starter.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample Report (Starter, partial) — Verdex Japan Entry | Blueshift Japan</title>
+<style>
+:root{--teal:#16B8B2;--navy:#15318F;--blue2:#1E5EDB;--ink:#1F2430;--muted:#5F6B7A;--line:#D5DEE6;--bg:#F7F9FB;--good:#0A8F66;--mid:#C77D00;--low:#C0392B;--soft:#EAF6F5}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif;color:var(--ink);background:#fff;line-height:2.15;font-size:14.5px}
+.page{max-width:940px;margin:0 auto}
+.pad{padding:0 64px}
+section.s{padding:30px 64px 22px;break-before:page}
+.cover{background:linear-gradient(120deg,#0D1829 0%,#15318F 55%,#16B8B2 135%);color:#fff;padding:70px 62px 56px;break-after:page}
+.cover *{color:#fff}
+.sample-tag{display:inline-block;font-size:11px;letter-spacing:.18em;font-weight:700;border:1px solid rgba(255,255,255,.5);border-radius:4px;padding:4px 12px;margin-bottom:24px}
+.cover h1{font-size:32px;font-weight:800;line-height:1.3;margin-bottom:14px}
+.cover .sub{font-size:15px;opacity:.92;margin-bottom:8px}
+.cover .sub2{font-size:12.5px;opacity:.8;margin-bottom:24px;line-height:1.7}
+.cover .meta{font-size:12px;opacity:.82;border-top:1px solid rgba(255,255,255,.25);padding-top:16px}
+.toc{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:20px 26px;font-size:13px}
+.toc h3{color:var(--navy);margin:0 0 12px;font-size:15px}
+.toc div{margin-bottom:7px}
+.toc b{color:var(--navy);display:inline-block;width:26px}
+.disclaimer{background:#FFF6E6;border:1px solid var(--mid);border-radius:8px;padding:12px 16px;font-size:11.5px;color:#6B4E00;margin:18px 0}
+h2,h3{break-after:avoid;page-break-after:avoid}
+h2{font-size:22px;color:var(--navy);margin:12px 0 6px;padding-left:14px;border-left:5px solid var(--teal);font-weight:700}
+h2 .en{font-size:11.5px;color:var(--muted);font-weight:500;letter-spacing:.05em;display:block}
+.chapnum{font-size:12px;color:var(--teal);font-weight:700;letter-spacing:.12em;padding-left:14px;margin-top:6px}
+h3{font-size:16px;color:var(--blue2);margin:36px 0 12px;font-weight:700;border-bottom:1px solid var(--line);padding-bottom:6px}
+p{margin-bottom:14px}
+.lead{font-size:14px;color:var(--ink);font-weight:500;line-height:2.0}
+.sowhat{background:var(--soft);border-left:4px solid var(--teal);padding:14px 18px;font-size:13px;margin:16px 0}
+.sowhat b{color:var(--navy)}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:12.5px}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+thead th{background:var(--navy);color:#fff;font-weight:600;font-size:11.5px}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+td.c,th.c{text-align:center}
+tr:nth-child(even) td{background:var(--bg)}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+.kpi-card{background:var(--bg);border-radius:10px;padding:14px;text-align:center;border-top:4px solid var(--teal)}
+.kpi-card .n{font-size:21px;font-weight:800;color:var(--navy);line-height:1.2}
+.kpi-card .l{font-size:10.5px;color:var(--muted);margin-top:5px;line-height:1.4}
+.verdict{background:var(--soft);border:1px solid var(--teal);border-radius:10px;padding:18px 20px;margin:14px 0}
+.verdict .v-label{font-size:12px;font-weight:700;color:var(--teal);letter-spacing:.1em}
+.verdict .v-main{font-size:21px;font-weight:800;color:var(--navy);margin:4px 0 8px}
+ul,ol{margin:8px 0 16px 22px}li{margin-bottom:8px}
+.chart{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:20px 0;break-inside:avoid}
+.chart .ct{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:12px}
+.chart .cn{font-size:11px;color:var(--muted);margin-top:10px}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:4px;color:#fff;white-space:nowrap}
+.t-go{background:var(--good)}.t-cau{background:var(--mid)}.t-avoid{background:var(--low)}
+.upsell{background:linear-gradient(120deg,#15318F,#16B8B2);color:#fff;border-radius:10px;padding:20px 24px;margin:18px 0}
+.upsell *{color:#fff}.upsell h4{font-size:15px;margin-bottom:8px}
+.secnote{font-size:11.5px;color:var(--muted)}
+footer{background:var(--ink);color:#C7D8E5;padding:24px 62px;font-size:11px;break-before:page}
+footer *{color:#C7D8E5}
+@media print{.page{max-width:none}.cover,.upsell{-webkit-print-color-adjust:exact;print-color-adjust:exact}table,tr,.kpi,.chart,.kpi-card{break-inside:avoid}h2,h3{break-after:avoid;page-break-after:avoid}}
+@media(max-width:640px){.cover,.pad,section.s,footer{padding-left:20px;padding-right:20px}.kpi{grid-template-columns:1fr}.cover h1{font-size:23px}}
+
+.sample-banner{position:sticky;top:0;z-index:50;background:#0D1829;color:#fff;font-size:12.5px;padding:10px 20px;text-align:center;letter-spacing:.02em}
+.sample-banner a{color:#16B8B2;font-weight:700;text-decoration:none}
+section.locked-ch{padding:16px 64px}
+.locked-card{border:2px dashed #C3CEDA;border-radius:12px;padding:20px 26px;background:#F7F9FB}
+.lk-title{font-weight:800;color:#15318F;font-size:15.5px;margin-bottom:6px}
+.lk-desc{font-size:12.5px;color:#5F6B7A;line-height:1.9;margin-bottom:8px}
+.lk-note{font-size:11px;color:#16B8B2;font-weight:700;letter-spacing:.04em}
+.sample-cta{background:linear-gradient(120deg,#15318F,#16B8B2);color:#fff;border-radius:12px;padding:28px 30px;margin:26px 64px;text-align:center}
+.sample-cta .t{font-size:18px;font-weight:800;margin-bottom:8px}
+.sample-cta .d{font-size:12.5px;opacity:.92;margin-bottom:16px}
+.sample-cta a{display:inline-block;background:#fff;color:#15318F;font-weight:800;font-size:14px;padding:12px 26px;border-radius:8px;text-decoration:none}
+@media(max-width:640px){section.locked-ch{padding:16px 20px}.sample-cta{margin:26px 20px}}
+</style>
+</head>
+<body>
+<div class="sample-banner">PARTIAL SAMPLE — 5 of 7 chapters open ・ Full report: 23 pages ・ Fictional client &quot;Verdex&quot; ・ <a href="https://blueshift-japan.com/brief.html?plan=starter">Get one for your company &rarr;</a></div>
+<div class="page">
+
+<div class="cover">
+  <span class="sample-tag">SAMPLE REPORT ・ Starterプラン仕様（スクリーニング）</span>
+  <h1>日本市場参入レポート<br>クライメートテックSaaS（GX×SaaS）</h1>
+  <div class="sub">対象（架空）：海外カーボン会計・ESG開示SaaS「Verdex」社 — 日本市場の魅力度スクリーニング</div>
+  <div class="sub2">「日本市場を本格検討すべきか」の暫定Go/No-Go判断。市場規模・有望セグメント・競合概観・主要リスクを5営業日で。</div>
+  <div class="meta">Blueshift Japan合同会社 ／ 発行：2026年7月 ／ 機密 — 本書は成果物の品質を示す見本であり、対象企業Verdexは架空です</div>
+</div>
+
+<div class="pad" style="padding-top:30px">
+<div class="toc">
+  <h3>目次 / Table of Contents</h3>
+  <div><b>1</b> エグゼクティブサマリー（暫定Go/No-Go）</div>
+  <div><b>2</b> 調査手法と前提</div>
+  <div><b>3</b> 規制環境の概要 — なぜ今か</div>
+  <div><b>4</b> 市場規模（TAM/SAM）と有望セグメント</div>
+  <div><b>5</b> 競合ランドスケープ（概観）</div>
+  <div><b>6</b> 主要リスクと参入障壁</div>
+  <div><b>7</b> 暫定判断と次のステップ</div>
+</div>
+<div class="disclaimer">
+本レポートは、Blueshiftが提供する「Starterプラン（30万円）」の成果物の品質を示すサンプルです。Starterは「日本市場を本格検討すべきか」を見極めるスクリーニングであり、詳細な参入戦略・競合の深掘り・GTM・収益シナリオは上位プラン（Standard/Premium）で提供します。対象企業「Verdex社」は架空です。市場・競合データは末尾の公開情報に基づく2026年7月時点の概況です。
+</div>
+</div>
+
+<!-- 1. EXEC SUMMARY -->
+<section class="s">
+<div class="chapnum">CHAPTER 1</div>
+<h2>エグゼクティブサマリー（暫定Go/No-Go）<span class="en">Executive Summary — Preliminary Screening</span></h2>
+<div class="verdict">
+  <div class="v-label">暫定判断 / PRELIMINARY GO・NO-GO</div>
+  <div class="v-main">暫定GO — 本格検討に進む価値あり</div>
+  <p style="margin:0;font-size:12.5px">日本のサステナビリティ開示義務化（SSBJ基準。2026年2月の内閣府令改正で<b>確定</b>、2027年3月期から段階適用）と排出量取引制度GX-ETSの本格稼働（改正GX推進法・2026年4月1日<b>施行済み</b>）が、カーボン会計・開示SaaSの需要を<b>法令で</b>押し上げている。2026年上期に規制が「予定」から「確定」に変わったことで、需要の蓋然性はさらに高まった。ただし国内勢が中小で先行・寡占しており、勝ち筋は「多国籍・連結開示」という限定領域に絞れるかにかかる。<b>本格的な参入戦略・競合分析・収益シナリオはStandard以上で精査することを推奨する。</b></p>
+</div>
+<div class="kpi">
+  <div class="kpi-card"><div class="n">284社</div><div class="l">2029年3月期までにSSBJ開示が義務化されるプライム企業（確定路線・時価総額5,000億円以上）</div></div>
+  <div class="kpi-card"><div class="n">300〜400社</div><div class="l">GX-ETS義務対象（直接排出10万t-CO₂以上・2026年4月施行済み）</div></div>
+  <div class="kpi-card"><div class="n">16.0%</div><div class="l">国内サステナ/ESGサービス市場CAGR（2024–29・IDC）</div></div>
+  <div class="kpi-card"><div class="n">約35億円</div><div class="l">想定SAM（多国籍・連結セグメント）</div></div>
+</div>
+<h3>1-1. スクリーニングの結論</h3>
+<table>
+  <thead><tr><th>論点</th><th>暫定評価</th><th class="c">判定</th></tr></thead>
+  <tbody>
+    <tr><td>需要はあるか</td><td>規制で確定（内閣府令改正済み・GX-ETS施行済み）。2027–2029年3月期に段階拡大</td><td class="c"><span class="tag t-go">◎</span></td></tr>
+    <tr><td>市場規模は十分か</td><td>SAM 約35億円。多国籍セグメントに絞れば有望</td><td class="c"><span class="tag t-go">○</span></td></tr>
+    <tr><td>競合環境は</td><td>国内勢が中小を寡占。正面競争は不利</td><td class="c"><span class="tag t-cau">△</span></td></tr>
+    <tr><td>勝ち筋はあるか</td><td>「多国籍・連結・複数規制横断」に空白あり</td><td class="c"><span class="tag t-go">○</span></td></tr>
+    <tr><td>総合（本格検討に進むか）</td><td>進む価値あり。ただし戦略の精査が前提</td><td class="c"><span class="tag t-go">GO</span></td></tr>
+  </tbody>
+</table>
+<div class="sowhat"><b>一言で：</b>「需要は法律が保証する有望市場。ただし国内勢が中小を固めているため、海外勢は『多国籍・連結開示』という一点に絞れるかが鍵。本格参入の可否は、その戦略を精査してから判断すべき。」</div>
+<h3>1-2. 市場魅力度スコアカード</h3>
+<p>日本のGX×SaaS市場を、6つの観点で5点満点評価する。スクリーニングの核心は「市場として本格検討に値するか」の総合判断である。</p>
+<table>
+  <thead><tr><th>評価観点</th><th class="c">スコア</th><th>評価理由</th></tr></thead>
+  <tbody>
+    <tr><td>需要の確度</td><td class="c">5 / 5</td><td>規制で義務化。景気に左右されない</td></tr>
+    <tr><td>市場規模</td><td class="c">4 / 5</td><td>SAM約35億円。多国籍に絞れば十分</td></tr>
+    <tr><td>成長性</td><td class="c">5 / 5</td><td>開示義務が2030年まで段階拡大、CAGR約22%</td></tr>
+    <tr><td>競争の緩さ</td><td class="c">2 / 5</td><td>国内勢が中小を寡占。汎用領域は激戦</td></tr>
+    <tr><td>参入障壁の低さ</td><td class="c">2 / 5</td><td>信用の壁・ローカライズ・販売網が障壁</td></tr>
+    <tr><td>タイミング</td><td class="c">5 / 5</td><td>早期適用群が動く2026–2027年が好機</td></tr>
+    <tr><td><b>総合</b></td><td class="c"><b>23 / 30</b></td><td><b>有望。ただし「狭く絞る戦略」が前提</b></td></tr>
+  </tbody>
+</table>
+<div class="chart">
+<div class="ct">図1：市場魅力度スコアカード（5点満点）</div>
+<svg viewBox="0 0 820 260" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <g font-size="12" fill="#1F2430">
+    <text x="170" y="42" text-anchor="end">需要の確度</text><rect x="180" y="30" width="450" height="18" fill="#0A8F66"/><text x="640" y="44">5</text>
+    <text x="170" y="78" text-anchor="end">市場規模</text><rect x="180" y="66" width="360" height="18" fill="#16B8B2"/><text x="550" y="80">4</text>
+    <text x="170" y="114" text-anchor="end">成長性</text><rect x="180" y="102" width="450" height="18" fill="#0A8F66"/><text x="640" y="116">5</text>
+    <text x="170" y="150" text-anchor="end">競争の緩さ</text><rect x="180" y="138" width="180" height="18" fill="#C0392B"/><text x="370" y="152">2</text>
+    <text x="170" y="186" text-anchor="end">参入障壁の低さ</text><rect x="180" y="174" width="180" height="18" fill="#C0392B"/><text x="370" y="188">2</text>
+    <text x="170" y="222" text-anchor="end">タイミング</text><rect x="180" y="210" width="450" height="18" fill="#0A8F66"/><text x="640" y="224">5</text>
+  </g>
+</svg>
+<div class="cn">需要・成長・タイミングは高評価。競争・参入障壁が低評価＝「魅力的だが戦い方を間違えると勝てない」市場。</div>
+</div>
+<div class="sowhat"><b>示唆：</b>「需要・成長・タイミング」は満点級だが、「競争・障壁」が低評価。<b>市場は魅力的だが、汎用で入ると勝てない。</b>魅力を取りに行くには、競争と障壁を回避する戦略（＝多国籍・連結への絞り込みとパートナー活用）が不可欠。その設計がStandard以上の役割。</div>
+</section>
+
+<!-- 2. METHODOLOGY -->
+<section class="s">
+<div class="chapnum">CHAPTER 2</div>
+<h2>調査手法と前提<span class="en">Methodology &amp; Assumptions</span></h2>
+<p class="lead">本スクリーニングは、規制当局資料・各社開示・報道・第三者調査などの公開情報に基づく。需要の発生時期を規制スケジュールから逆算し、市場規模を対象企業数×想定単価でボトムアップに試算した。</p>
+<table>
+  <thead><tr><th style="width:34%">項目</th><th class="c" style="width:20%">前提値</th><th>根拠</th></tr></thead>
+  <tbody>
+    <tr><td>為替</td><td class="c">1ドル = 150円</td><td>便宜上の固定レート</td></tr>
+    <tr><td>エンタープライズ平均ARR</td><td class="c">700万円/社/年</td><td>競合価格・海外実績から保守的に設定</td></tr>
+    <tr><td>SAM対象</td><td class="c">約500社</td><td>多国籍・連結開示に課題を持つ上場大企業</td></tr>
+  </tbody>
+</table>
+<div class="secnote">※Starterは公開情報に基づくスクリーニングです。対象顧客へのアンケート（一次調査）や競合の深掘り、詳細な収益シナリオは上位プランで実施します。コール・ヒアリングは行いません。</div>
+</section>
+
+<!-- 3. REGULATION -->
+<section class="s">
+<div class="chapnum">CHAPTER 3</div>
+<h2>規制環境の概要 — なぜ今か<span class="en">Regulatory Drivers</span></h2>
+<p class="lead">日本のGX×SaaS市場の需要は、景気でなく<b>規制スケジュール</b>で規定される。3つの制度が、算定・開示・削減のSaaS需要を時間軸で確定させている。そして2026年上期、その規制が相次いで「予定」から「確定・施行」に変わった。</p>
+<h3>3-0. 2026年上期に確定した4つの事実</h3>
+<table>
+  <thead><tr><th style="width:22%">時期</th><th style="width:36%">出来事</th><th>Verdexへの含意</th></tr></thead>
+  <tbody>
+    <tr><td>2026年1月8日</td><td>金融審議会WG報告 公表（開示・保証制度の骨格）</td><td>保証義務化まで含めた制度の全体像が固まった</td></tr>
+    <tr><td>2026年2月</td><td>内閣府令改正 — SSBJ基準の有報開示義務化が<b>法令で確定</b></td><td>需要が「見通し」から「確定」へ。買い手の稟議が通りやすくなる</td></tr>
+    <tr><td>2026年2月26日</td><td>EUオムニバス指令 官報掲載 — CSRD対象企業を約8割削減</td><td>EU側の需要が縮小。グローバルベンダーの成長の重心が日本へ移る</td></tr>
+    <tr><td>2026年4月1日</td><td>改正GX推進法 施行 — GX-ETS義務参加が開始</td><td>多排出約300〜400社に算定・報告の法的義務が発生済み</td></tr>
+  </tbody>
+</table>
+<div class="sowhat"><b>示唆：</b>2026年は「日本のサステナ開示規制が世界で最も確度の高い成長市場になった年」である。EUが縮み（オムニバス）、米国が揺れる中、日本はスケジュールを法令で確定させた。<b>規制の重心移動は、Verdexが日本を優先すべき時間軸上の根拠になる。</b></div>
+<div class="chart">
+<div class="ct">図2：規制ロードマップ 2026–2030</div>
+<svg viewBox="0 0 820 190" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="40" y1="60" x2="800" y2="60" stroke="#16B8B2" stroke-width="3"/>
+  <g font-size="12" fill="#1F2430" text-anchor="middle">
+    <circle cx="80" cy="60" r="6" fill="#15318F"/><text x="80" y="40">2026</text>
+    <circle cx="220" cy="60" r="6" fill="#15318F"/><text x="220" y="40">2027</text>
+    <circle cx="400" cy="60" r="6" fill="#15318F"/><text x="400" y="40">2028</text>
+    <circle cx="580" cy="60" r="6" fill="#15318F"/><text x="580" y="40">2029</text>
+    <circle cx="740" cy="60" r="6" fill="#15318F"/><text x="740" y="40">2030</text>
+  </g>
+  <g font-size="10.5" fill="#5F6B7A" text-anchor="middle">
+    <text x="80" y="90">GX-ETS本格稼働</text>
+    <text x="220" y="90">SSBJ開示開始</text><text x="220" y="104">時価総額3兆円以上</text>
+    <text x="400" y="90">SSBJ 1兆円以上</text><text x="400" y="104">炭素賦課金 開始</text>
+    <text x="580" y="90">SSBJ 5,000億円以上</text>
+    <text x="740" y="90">プライム全社へ拡大</text><text x="740" y="104">（時期・要否は検討中）</text>
+  </g>
+</svg>
+<div class="cn">出典：金融庁（SSBJ）、経済産業省GXリーグ（GX-ETS）</div>
+</div>
+<table>
+  <thead><tr><th style="width:24%">制度</th><th style="width:20%">時期</th><th>SaaS需要への影響</th></tr></thead>
+  <tbody>
+    <tr><td>SSBJ開示義務化</td><td>2027年3月期〜</td><td>有報でScope1-3開示が義務化。時価総額3兆円以上（68社）→1兆円以上（累計171社）→5,000億円以上（累計284社）へ段階拡大。プライム全社への拡大は検討中</td></tr>
+    <tr><td>第三者保証の義務化</td><td>開示義務化の翌期〜</td><td>限定的保証から開始。当初2年間はScope1・2＋ガバナンス・リスク管理が対象。「監査に通るデータ基盤」需要を法令が確定させた</td></tr>
+    <tr><td>GX-ETS</td><td>2026年4月施行済み</td><td>直接排出10万t以上の300〜400社に算定・報告を義務化。初年度は排出量届出と移行計画提出が先行し、排出枠割当は2027年度から</td></tr>
+    <tr><td>炭素賦課金</td><td>2028年度〜</td><td>排出にコスト。削減シミュレーション需要が拡大</td></tr>
+  </tbody>
+</table>
+<div class="chart">
+<div class="ct">図3：SSBJ開示義務化の対象拡大（時価総額基準）</div>
+<svg viewBox="0 0 820 230" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <g font-size="11" fill="#1F2430">
+    <rect x="60" y="170" width="150" height="40" fill="#1E5EDB"/><text x="135" y="195" fill="#fff" text-anchor="middle">3兆円以上 68社</text><text x="135" y="160" text-anchor="middle">2027年3月期</text>
+    <rect x="240" y="130" width="150" height="80" fill="#1E5EDB"/><text x="315" y="175" fill="#fff" text-anchor="middle">1兆円以上 累計171社</text><text x="315" y="120" text-anchor="middle">2028年3月期</text>
+    <rect x="420" y="85" width="150" height="125" fill="#16B8B2"/><text x="495" y="150" fill="#fff" text-anchor="middle">5,000億円以上 累計284社</text><text x="495" y="75" text-anchor="middle">2029年3月期</text>
+    <rect x="600" y="30" width="170" height="180" fill="#9AA7B5"/><text x="685" y="115" fill="#fff" text-anchor="middle">プライム全社へ拡大</text><text x="685" y="133" fill="#fff" text-anchor="middle">（検討中・未確定）</text><text x="685" y="20" text-anchor="middle">時期未定</text>
+  </g>
+  <line x1="50" y1="210" x2="790" y2="210" stroke="#D5DEE6" stroke-width="1"/>
+</svg>
+<div class="cn">時価総額の大きい企業から順に義務化（社数は金融庁WG資料・2025年10月30日）。最初に攻めるべき顧客が制度で特定されている。プライム全社への拡大は検討中で未確定。</div>
+</div>
+<div class="sowhat"><b>示唆：</b>需要のタイミングが時価総額順に「予約済み」。最初に動くのは時価総額上位かつ多国籍の企業（2026〜2027年）。買い手の動機は流行でなく法令遵守であり、需要の蓋然性が高い。</div>
+<h3>3-1. 第三者保証と国際枠組み（需要を厚くする2要因）</h3>
+<p>需要の「質」を高める2つの要因がある。①開示は第三者保証を受けるため、監査に通るデータ基盤が必要。②多国籍企業は複数の国際枠組みに同時対応する必要がある。</p>
+<table>
+  <thead><tr><th>要因</th><th>内容</th><th>SaaS需要への含意</th></tr></thead>
+  <tbody>
+    <tr><td>第三者保証（assurance）</td><td>開示義務化の翌期から限定的保証を義務化。当初2年間はScope1・2＋ガバナンス・リスク管理が対象。保証業務実施者は登録制で、コンサル兼業禁止等の規律も導入方向</td><td>監査証跡・トレーサビリティを備えたツールの価値が法令で裏づけられた</td></tr>
+    <tr><td>SSBJ（日本）</td><td>ISSBと整合的に設計</td><td>グローバル基準対応の製品が活きる</td></tr>
+    <tr><td>CSRD（欧州）</td><td>オムニバス指令（2026年2月官報掲載）で対象企業を約8割削減、従業員1,000人超に限定。開示項目も6割減へ</td><td>EU側の需要は縮小方向。ただし在欧の大規模子会社を持つ日本企業の対応は残り、SSBJ×ISSB×縮小CSRDの横断需要は健在</td></tr>
+  </tbody>
+</table>
+<div class="sowhat"><b>示唆：</b>需要の核は2層ある。①保証義務化が確定したことで、プライム上位企業は「<b>監査に通るデータ基盤</b>」を法令期限つきで必要とする——この需要は逃げない。②多国籍企業は「同じ排出データから、日本・欧州・米国の各開示を生成する」<b>複数規制横断の一元化</b>を求める——CSRDの縮小でEU側の緊急度はやや下がったが、SSBJ×ISSB整合という背骨は不変。海外勢が差別化できる空白はこの2層の交点にある。</div>
+</section>
+
+<!-- 4. MARKET SIZE -->
+<section class="s">
+<div class="chapnum">CHAPTER 4</div>
+<h2>市場規模（TAM/SAM）と有望セグメント<span class="en">Market Size &amp; Top Segments</span></h2>
+<p class="lead">市場規模を対象企業数×想定ARR（700万円）でボトムアップに試算する（概算）。スクリーニングでは、到達可能で収益が見込めるSAMの規模感を確認する。</p>
+<div class="chart">
+<div class="ct">図4：市場規模ファネル（概算）</div>
+<svg viewBox="0 0 820 200" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <g font-size="12" fill="#fff" text-anchor="middle">
+    <polygon points="60,25 760,25 660,72 160,72" fill="#15318F"/><text x="410" y="52">TAM 約110億円超 ／ プライム全社適用時（約1,600社＋α・任意適用含む）</text>
+    <polygon points="160,82 660,82 580,129 240,129" fill="#1E5EDB"/><text x="410" y="110">SAM 約35億円 ／ 多国籍・連結開示に課題（約500社）</text>
+    <polygon points="240,139 580,139 510,186 310,186" fill="#16B8B2"/><text x="410" y="167">SOM 約10〜17億円 ／ 初期3年の獲得目標（150〜250社）</text>
+  </g>
+</svg>
+<div class="cn">想定ARR 700万円/社で換算。義務化が確定した284社だけでも約20億円の「需要の床」が法令で保証されている。参考：国内サステナ/ESGサービス市場全体は2,735億円（2025年・IDC）→4,962億円（2029年予測）。詳細な積み上げ・感応度はStandardで精査。</div>
+</div>
+<h3>4-1. 有望トップ3セグメント</h3>
+<table>
+  <thead><tr><th class="c">優先</th><th>セグメント</th><th class="num">規模感</th><th>魅力の理由</th></tr></thead>
+  <tbody>
+    <tr><td class="c"><span class="tag t-go">第1</span></td><td>多国籍展開の商社・製造・電機（SSBJ早期適用群）</td><td class="num">150〜250社</td><td>海外子会社の連結開示が最難関で国内勢が手薄。単価が高い</td></tr>
+    <tr><td class="c"><span class="tag t-cau">第2</span></td><td>GX-ETS義務対象の多排出企業（鉄鋼・化学・電力）</td><td class="num">300〜400社</td><td>算定・検証が法的に必須。国内勢と競合する点に注意</td></tr>
+    <tr><td class="c"><span class="tag t-avoid">後回し</span></td><td>国内単体の中小企業</td><td class="num">数万社</td><td>価格感度が高く国内勢が寡占。海外勢には不利</td></tr>
+  </tbody>
+</table>
+<div class="sowhat"><b>示唆：</b>狙うべきは第1セグメント（多国籍・連結）。ここは国内勢が手薄で、海外勢の強みが活きる。国内中小は狙わない。詳細なターゲット定義・ペルソナ・購買プロセスはStandardで提供。</div>
+
+<h3>4-2. 業種別の需要強度</h3>
+<p>同じ「多国籍上場企業」でも、海外子会社が多くサプライチェーンが複雑な業種ほど、Scope3算定が困難で需要が強い。</p>
+<table>
+  <thead><tr><th>業種</th><th class="c">Scope3の複雑さ</th><th class="c">需要強度</th><th>備考</th></tr></thead>
+  <tbody>
+    <tr><td>総合商社</td><td class="c">極めて高い</td><td class="c"><span class="tag t-go">最高</span></td><td>連結範囲が広大</td></tr>
+    <tr><td>自動車・電機（製造）</td><td class="c">高い</td><td class="c"><span class="tag t-go">高</span></td><td>サプライチェーンが長い</td></tr>
+    <tr><td>機械・化学</td><td class="c">高い</td><td class="c"><span class="tag t-cau">中〜高</span></td><td>GX-ETS対象と重複</td></tr>
+    <tr><td>金融</td><td class="c">中（投融資排出）</td><td class="c"><span class="tag t-cau">中</span></td><td>Scope3カテゴリ15が論点</td></tr>
+    <tr><td>内需サービス・小売</td><td class="c">中</td><td class="c"><span class="tag t-avoid">低〜中</span></td><td>国内勢で充足しやすい</td></tr>
+  </tbody>
+</table>
+
+<h3>4-3. 需要のタイミング（コホート）</h3>
+<p>SSBJの段階適用により、市場に参入してくる買い手の数は年度ごとに予測できる。</p>
+<table>
+  <thead><tr><th>適用時期</th><th>対象（時価総額）</th><th class="num">概算社数</th></tr></thead>
+  <tbody>
+    <tr><td>2027年3月期</td><td>3兆円以上</td><td class="num">68社（時価総額カバレッジ54.1%）</td></tr>
+    <tr><td>2028年3月期</td><td>1兆円以上</td><td class="num">累計171社（同72.5%）</td></tr>
+    <tr><td>2029年3月期</td><td>5,000億円以上</td><td class="num">累計284社（同80.8%）</td></tr>
+    <tr><td>時期未定</td><td>プライム全社への拡大</td><td class="num">検討中（約1,600社・未確定）</td></tr>
+  </tbody>
+</table>
+<p class="secnote">社数・カバレッジは金融庁WG事務局説明資料（2025年10月30日）による。各企業は適用初年度の1〜2年前に体制を構築する。最初の波（時価総額上位68〜171社）が動くのが2026〜2027年。</p>
+<div class="chart">
+<div class="ct">図5：開示義務化される企業数の累積（コホート）</div>
+<svg viewBox="0 0 820 230" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="70" y1="190" x2="780" y2="190" stroke="#5F6B7A"/>
+  <g font-size="11" fill="#1F2430" text-anchor="middle">
+    <rect x="110" y="172" width="90" height="18" fill="#15318F"/><text x="155" y="166">68社</text><text x="155" y="208" fill="#5F6B7A">2027/3期</text>
+    <rect x="280" y="152" width="90" height="38" fill="#1E5EDB"/><text x="325" y="146">171社</text><text x="325" y="208" fill="#5F6B7A">2028/3期</text>
+    <rect x="450" y="115" width="90" height="75" fill="#16B8B2"/><text x="495" y="109">284社</text><text x="495" y="208" fill="#5F6B7A">2029/3期</text>
+    <rect x="620" y="40" width="110" height="150" fill="#9AA7B5"/><text x="675" y="34">約1,600社（検討中）</text><text x="675" y="208" fill="#5F6B7A">時期未定</text>
+  </g>
+</svg>
+<div class="cn">時価総額の大きい企業から順に開示義務化（社数は金融庁WG資料）。最初の波（68〜171社）に照準を合わせるのが定石。プライム全社への拡大は未確定のため灰色表示。</div>
+</div>
+
+<h3>4-4. 需要の根源：顧客はなぜ買うのか（概観）</h3>
+<p>「規制があるから」だけでなく、現場の業務の痛みが需要の本質。多国籍企業は現状、海外子会社の排出をExcelで手集計しており、以下の痛点を抱える。</p>
+<table>
+  <thead><tr><th>現状の痛点</th><th>内容</th></tr></thead>
+  <tbody>
+    <tr><td>海外子会社データの収集・標準化</td><td>各国からExcelで返り、通貨・単位・係数がバラバラ。本社が手で整え数週間を要する</td></tr>
+    <tr><td>算定の正確性・監査対応</td><td>係数の根拠が属人的で、監査の指摘で手戻り</td></tr>
+    <tr><td>複数規制への二重・三重対応</td><td>日本・欧州・米国で別々にレポートを作り直す</td></tr>
+    <tr><td>人材不足</td><td>開示業務量が急増する一方、専門人材は採用難</td></tr>
+  </tbody>
+</table>
+<div class="sowhat"><b>示唆：</b>需要は「ツールが欲しい」でなく「<b>人を増やせないが開示はやらねばならない</b>」という構造的な痛みに根ざす。だから支払意欲が高い。詳細な現状業務分析・ROI試算・ペルソナはStandard以上で提供。</div>
+</section>
+
+<!-- 5. COMPETITION -->
+<section class="s locked-ch">
+<div class="chapnum">CHAPTER 5</div>
+<div class="locked-card">
+  <div class="lk-title">&#128274; 競合ランドスケープ（概観）</div>
+  <div class="lk-desc">国内市場は国内SaaSが中小〜中堅で先行・寡占化しつつある。スクリーニングでは主要プレイヤーの概観と「空白」の有無を確認する（各社の深掘り・機能比較はStandardで提供）。</div>
+  <div class="lk-note">FULL CHAPTER IN CLIENT REPORT ／ この章の全文は製品版（全23ページ）に収録</div>
+</div>
+</section><section class="s locked-ch">
+<div class="chapnum">CHAPTER 6</div>
+<div class="locked-card">
+  <div class="lk-title">&#128274; 主要リスクと参入障壁</div>
+  <div class="lk-desc">本格検討に進む前に、認識すべき主要リスクと参入障壁を整理する。</div>
+  <div class="lk-note">FULL CHAPTER IN CLIENT REPORT ／ この章の全文は製品版（全23ページ）に収録</div>
+</div>
+</section><section class="s">
+<div class="chapnum">CHAPTER 7</div>
+<h2>暫定判断と次のステップ<span class="en">Preliminary Verdict &amp; Next Steps</span></h2>
+<p class="lead"><b>暫定判断：GO（本格検討に進む価値あり）。</b>需要は規制で確定しており、多国籍・連結という空白も存在する。ただし、勝てるかどうかは「その空白に、どう・誰と・いくらで入るか」という戦略の精査にかかっている。</p>
+<h3>7-1. このスクリーニングで分かったこと</h3>
+<ul>
+  <li>需要は法令で確定（SSBJは2026年2月の内閣府令改正で確定、GX-ETSは2026年4月施行済み）。市場は本格検討に値する。</li>
+  <li>2029年3月期までに284社の開示義務化が確定路線。保証義務化まで含め「監査に通るデータ基盤」需要に法令の期限がついた。</li>
+  <li>国内勢が中小を寡占。海外勢の勝ち筋は「多国籍・連結・保証対応」に絞られる。</li>
+  <li>最大の障壁は「寡占」と「マネタイズの遅さ」。EUオムニバスで規制の重心が日本に移り、空白の争奪は2〜3年で激化する見込み——参入するなら早い方がいい。</li>
+</ul>
+<h3>7-2. 本格検討に必要な次の分析</h3>
+<div class="upsell">
+  <h4>Standardプランで明らかにすること（このStarterの先）</h4>
+  <p style="margin:0;font-size:12.5px">競合5社の深掘りプロファイルと機能比較／ターゲットのペルソナと購買プロセス／ポジショニングとパートナー戦略／価格戦略／3年収益シナリオ（Bear/Base/Bull）／12ヶ月GTMロードマップ。<b>「どう入るか」の参入プランを描きます。</b></p>
+  <p style="margin:8px 0 0;font-size:12.5px">さらに<b>Premiumプラン</b>では、参入モード分析（子会社/代理店/JV/買収）・製品ローカライズ・実名候補の攻略プレイブック・M&amp;Aターゲット・競合war-game・実装/撤退基準まで踏み込み、<b>「誰に・どう仕掛けるか」</b>を実行可能な形で提供します。</p>
+</div>
+<h3>7-3. プラン比較（このStarterの先に得られるもの）</h3>
+<table>
+  <thead><tr><th>提供内容</th><th class="c">Starter<br>（本書）</th><th class="c">Standard</th><th class="c">Premium</th></tr></thead>
+  <tbody>
+    <tr><td>市場規模・有望セグメント・競合概観</td><td class="c">○</td><td class="c">◎</td><td class="c">◎</td></tr>
+    <tr><td>暫定Go/No-Go</td><td class="c">○</td><td class="c">○</td><td class="c">○</td></tr>
+    <tr><td>競合5社の深掘り・機能比較</td><td class="c">—</td><td class="c">○</td><td class="c">○</td></tr>
+    <tr><td>ターゲット/ペルソナ/購買プロセス</td><td class="c">—</td><td class="c">○</td><td class="c">○</td></tr>
+    <tr><td>ポジショニング・パートナー戦略・価格戦略</td><td class="c">—</td><td class="c">○</td><td class="c">○</td></tr>
+    <tr><td>3年収益シナリオ・12ヶ月GTM</td><td class="c">—</td><td class="c">○</td><td class="c">○</td></tr>
+    <tr><td>参入モード分析・ローカライズ・実名候補攻略</td><td class="c">—</td><td class="c">—</td><td class="c">○</td></tr>
+    <tr><td>M&amp;Aターゲット・war-game・実装/撤退基準</td><td class="c">—</td><td class="c">—</td><td class="c">○</td></tr>
+    <tr><td>ページ数の目安</td><td class="c">20–25</td><td class="c">40–60</td><td class="c">60+</td></tr>
+    <tr><td>価格</td><td class="c">¥30万</td><td class="c">¥70万</td><td class="c">¥150万</td></tr>
+  </tbody>
+</table>
+<p class="secnote">アップグレードは差額のお支払いで可能（直近納品から90日以内）。まずStarterで市場を見極め、有望なら差額でStandard以上へ。</p>
+<h3>7-4. 本格検討に進むかの判断基準</h3>
+<p>このStarterを踏まえ、貴社が次のステップ（Standard）に進むべきかを、以下で自己診断できる。</p>
+<table>
+  <thead><tr><th>問い</th><th>YESなら</th></tr></thead>
+  <tbody>
+    <tr><td>多国籍・連結開示に課題を持つ顧客にリーチしたいか</td><td>市場の空白がそのまま機会になる</td></tr>
+    <tr><td>3年以上の投資視点で日本市場を見られるか</td><td>マネタイズの遅さを許容できる</td></tr>
+    <tr><td>パートナー経由の参入を許容できるか</td><td>信用の壁を越える現実的な道がある</td></tr>
+    <tr><td>製品のローカライズに投資できるか</td><td>参入の必須条件を満たせる</td></tr>
+  </tbody>
+</table>
+<p class="secnote">3つ以上YESなら、Standardで参入戦略を精査する価値が高い。NOが多ければ、参入は時期尚早か、別市場を優先すべき。</p>
+<div class="sowhat"><b>次の一手：</b>この市場は「需要の有無」でなく「信用の壁をどう越えるか」で勝負が決まる。本格参入を検討するなら、Standard以上で参入戦略を精査することを推奨する。</div>
+<h3>7-5. 主要出典</h3>
+<ul style="font-size:12px;color:var(--muted)">
+  <li>金融庁 金融審議会「サステナビリティ情報の開示と保証のあり方に関するWG」事務局説明資料（2025年10月30日）・WG報告（2026年1月8日公表）— 適用スケジュール・社数・保証制度の骨格</li>
+  <li>内閣府令改正（2026年2月）— SSBJ基準の有価証券報告書開示義務化</li>
+  <li>改正GX推進法（2026年4月1日施行）・経済産業省 排出量取引制度資料 — GX-ETS義務対象・初年度スケジュール</li>
+  <li>EUオムニバス指令（2026年2月26日官報掲載）— CSRD対象縮小・ESRS簡素化の方向</li>
+  <li>IDC Japan 国内サステナビリティ／ESGサービス市場予測 — 市場規模2,735億円（2025年）→4,962億円（2029年予測）</li>
+  <li>各社公表資料・報道（アスエネ・ゼロボード・booost・e-dash・Persefoni ほか）</li>
+</ul>
+<p class="secnote">推定値（SAM/SOM・想定ARR・価格水準等）は上記公開情報からの当社推定です。実プロジェクトでは前提を貴社仕様に合わせて再計算します。</p>
+</section><div class="sample-cta">
+  <div class="t">Read the full 23-page Starter report — built for your company</div>
+  <div class="d">This sample shows 5 of 7 chapters. The full deliverable — tailored to your product, targets and constraints — is ¥300K, delivered in business days, entirely over email. Fictional client &quot;Verdex&quot;; your report anchors on your reality.</div>
+  <a href="https://blueshift-japan.com/brief.html?plan=starter">Request Starter Report &rarr;</a>
+</div>
+
+<footer>
+  <div>本書はBlueshift Japan合同会社が提供するStarterプラン成果物の品質見本（サンプル）です。対象企業Verdexは架空であり、実在の企業・取引とは関係ありません。数値は公開情報に基づく概算・試算を含み、投資判断その他の結果を保証するものではありません。本サービスは紹介（warm introduction）を提供しません。</div>
+  <div style="margin-top:6px">Blueshift Japan合同会社 ／ 代表社員 仲尾 知晃 ／ ceo@blueshift-japan.com ／ https://blueshift-japan.com</div>
+</footer>
+
+</div>
+</body>
+</html>
