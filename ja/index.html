@@ -30,16 +30,16 @@ body{font-family:'Zen Old Mincho','Hiragino Mincho ProN',serif;font-weight:500;c
 .serif{font-family:'Zen Old Mincho',serif}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:100;background:rgba(250,248,242,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0 36px;height:62px;display:flex;align-items:center;justify-content:space-between}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,248,242,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0 36px;height:68px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{text-decoration:none;display:flex;align-items:center;gap:10px}
-.nav-orb{width:26px;height:26px;display:block}
-.nav-wm{font-family:'Sora',sans-serif;font-size:18px;font-weight:800;color:var(--navy);letter-spacing:-.5px}
+.nav-orb{width:30px;height:30px;display:block}
+.nav-wm{font-family:'Sora',sans-serif;font-size:21px;font-weight:800;color:var(--navy);letter-spacing:-.5px}
 .nav-wm b{color:var(--teal);font-weight:800}
-.nav-logo em{font-style:normal;font-size:10.5px;font-weight:700;color:var(--muted);letter-spacing:.12em;margin-left:2px}
+.nav-logo em{font-style:normal;font-size:12.5px;font-weight:700;color:var(--muted);letter-spacing:.12em;margin-left:2px}
 .nav-links{display:flex;gap:20px;align-items:center}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:15px;font-weight:600;transition:color .2s}
 .nav-links a:hover{color:var(--navy)}
-.nav-cta{background:var(--teal);color:#fff !important;padding:9px 18px;border-radius:4px;font-weight:700 !important;font-size:14px;white-space:nowrap;box-shadow:0 4px 16px -6px rgba(30,58,102,.55);transition:transform .2s}
+.nav-cta{background:var(--teal);color:#fff !important;padding:10px 20px;border-radius:4px;font-weight:700 !important;font-size:15px;white-space:nowrap;box-shadow:0 4px 16px -6px rgba(30,58,102,.55);transition:transform .2s}
 .nav-cta:hover{transform:translateY(-1px)}
 
 /* HERO */
@@ -70,6 +70,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,248,242,.94);backdrop-
 
 /* SHARED */
 .wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+.wrap-wide{max-width:1360px}
 .section{padding:76px 0}
 .section-label{font-size:12px;font-weight:700;color:var(--teal-deep);letter-spacing:.18em;margin-bottom:12px}
 .section h2{font-family:'Zen Old Mincho',serif;font-size:33px;font-weight:800;line-height:1.5;margin-bottom:18px;letter-spacing:.03em}
@@ -147,7 +148,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,248,242,.94);backdrop-
   linear-gradient(150deg,#0E1B33,#122A52);border-radius:18px;padding:44px;color:#fff;position:relative;overflow:hidden}
 .set-plan::before{content:'';position:absolute;top:-30%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(30,58,102,.18),transparent 65%)}
 .set-plan>*{position:relative;z-index:1}
-.set-badge{display:inline-flex;align-items:center;gap:14px;color:var(--gold);font-size:12px;font-weight:600;letter-spacing:.26em;margin-bottom:18px}
+.set-badge{display:inline-flex;align-items:center;gap:14px;color:var(--gold);font-size:16px;font-weight:700;letter-spacing:.2em;margin-bottom:20px}
 .set-badge::before{content:'';width:36px;height:1px;background:rgba(213,190,143,.55)}
 .set-plan h3{font-family:'Zen Old Mincho',serif;font-size:25px;font-weight:800;margin-bottom:12px;letter-spacing:.03em}
 .set-plan>p{font-size:14px;color:rgba(255,255,255,.78);line-height:2;max-width:700px;margin-bottom:26px}
@@ -173,8 +174,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,248,242,.94);backdrop-
 /* PROCESS */
 .process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
 .process-grid::before{content:'';position:absolute;top:26px;left:10%;right:10%;height:2px;background:var(--teal);opacity:.22}
-.process-step{text-align:center;padding:18px 10px}
-.step-num{width:52px;height:52px;border-radius:50%;background:var(--teal-wash);color:var(--teal-deep);font-family:'Sora',sans-serif;font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;position:relative;z-index:1;border:1px solid rgba(30,58,102,.25)}
+.process-step{text-align:center;padding:18px 14px}
+.step-num{width:58px;height:58px;border-radius:50%;background:var(--teal-wash);color:var(--teal-deep);font-family:'Sora',sans-serif;font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;position:relative;z-index:1;border:1px solid rgba(30,58,102,.25)}
 .process-step h3{font-size:14px;font-weight:700;margin-bottom:8px}
 .process-step p{font-size:12.5px;color:var(--muted);line-height:1.8}
 
@@ -184,8 +185,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,248,242,.94);backdrop-
 .founder-photo{width:200px;height:200px;border-radius:50%;object-fit:cover;border:4px solid var(--teal-wash);box-shadow:0 16px 40px -16px rgba(14,27,51,.35);margin-bottom:20px}
 .founder-name{font-family:'Zen Old Mincho',serif;font-size:22px;font-weight:800;margin-bottom:4px}
 .founder-title{font-size:13.5px;color:var(--muted);margin-bottom:16px;line-height:1.7}
-.founder-badge{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 14px;font-size:12.5px;margin-bottom:8px}
-.founder-badge strong{display:block;font-size:10.5px;font-weight:700;color:var(--teal-deep);letter-spacing:.08em;margin-bottom:2px}
+.founder-info{font-size:15px;color:var(--muted);line-height:2.1}
+.founder-info a{color:var(--teal-deep);text-decoration:none;font-weight:600}
 .founder-text .fq{font-family:'Zen Old Mincho',serif;font-size:21px;font-weight:700;line-height:1.9;color:var(--ink);margin-bottom:22px;letter-spacing:.03em}
 .founder-text p{font-size:14.5px;color:#3A4658;line-height:2.1;margin-bottom:18px}
 .founder-text p:last-child{margin:0}
@@ -229,7 +230,9 @@ footer a{color:#D6C28F;text-decoration:none}
 @media(max-width:860px){
   .hero h1{font-size:38px}
   .hero{padding:64px 22px 56px}
-  .hero-badge{font-size:11px;letter-spacing:.2em;gap:10px}
+  .hero-badge{font-size:11.5px;letter-spacing:.2em;gap:10px}
+  .set-badge{font-size:13.5px;letter-spacing:.12em;gap:10px}
+  .set-badge::before{width:20px}
   .hero-badge::before,.hero-badge::after{width:18px}
   nav{padding:0 18px}
   .nav-logo em{display:none}
@@ -263,16 +266,15 @@ footer a{color:#D6C28F;text-decoration:none}
 .price-for{font-size:14px;min-height:42px}
 .price-period{font-size:13.5px}
 .price-features li{font-size:14.5px}
-.set-plan>p{font-size:15.5px;color:rgba(255,255,255,.88)}
+.set-plan>p{font-size:15.5px;color:rgba(255,255,255,.88);max-width:none}
 .set-flow{font-size:15px}
 .set-example h4{font-size:14.5px}
 .fine{font-size:13.5px;color:#4E5F74}
 .set-plan .fine{color:rgba(255,255,255,.68)}
 .why-card h3{font-size:17.5px}
 .why-card p{font-size:15px;color:#3E4F66}
-.process-step h3{font-size:15.5px}
-.process-step p{font-size:14.5px;color:#3E4F66}
-.founder-badge{font-size:14px}
+.process-step h3{font-size:17px}
+.process-step p{font-size:15.5px;color:#3E4F66;line-height:2}
 .founder-text p{font-size:16px}
 .company-table th,.company-table td{font-size:15.5px}
 .form-row label{font-size:14.5px}
@@ -539,7 +541,7 @@ h1,h2,h3,p,li,dt,dd,th,td,.hero-badge,.section-label,.proof-label,.price-for,.sv
 
 <!-- PROCESS -->
 <div class="section" id="process" style="padding-top:0">
-  <div class="wrap">
+  <div class="wrap wrap-wide">
     <div class="section-label">PROCESS — 制作の流れ</div>
     <h2 class="serif">はじめてでも、大丈夫です</h2>
     <p class="lead">「ホームページのことは全然わからない」という方こそ、お任せください。専門用語を使わず、ひとつずつ一緒に進めます。</p>
@@ -588,8 +590,7 @@ h1,h2,h3,p,li,dt,dd,th,td,.hero-badge,.section-label,.proof-label,.price-for,.sv
         <img src="../nakkan.png" alt="代表 仲尾知晃" class="founder-photo">
         <div class="founder-name serif">仲尾 知晃</div>
         <div class="founder-title">Blueshift Japan合同会社<br>代表 / Founder & CEO</div>
-        <div class="founder-badge"><strong>経歴</strong>住友商事にて20年、貿易・海外投資・事業開発に従事</div>
-        <div class="founder-badge"><strong>連絡先</strong>ceo@blueshift-japan.com</div>
+        <p class="founder-info">住友商事にて20年、貿易・海外投資・事業開発に従事。<br><a href="mailto:ceo@blueshift-japan.com">ceo@blueshift-japan.com</a></p>
       </div>
       <div class="founder-text">
         <div class="fq">世界を回って、確信したことがあります。<br>日本は、素晴らしい。</div>
