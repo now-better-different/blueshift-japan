@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="https://blueshift-japan.com/ja/terms.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご契約とお取引の流れ | Blueshift Japan — 地域・観光・伝統工芸のWeb制作</title>
+<meta name="description" content="Webサイト制作のご契約条件を、先にすべて公開しています。契約の成立時点、お支払い、修正、キャンセル、著作権、補助金利用時の進め方まで。">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600;700;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E1B33;--ink:#1A2333;--accent:#1E3A66;--accent-deep:#274A7E;
+  --muted:#4A5A70;--line:rgba(14,27,51,.1);--surface:#FFFFFF;
+  --gold:#D5BE8F;--gold-deep:#B99B5F;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Zen Old Mincho','Hiragino Mincho ProN',serif;color:var(--ink);-webkit-font-smoothing:antialiased;line-height:2;
+  background-color:#F9F5EA;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.011 0.016' numOctaves='3' seed='11'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.46 0 0 0 0 0.39 0 0 0 0 0.24 0 0 0 0.055 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='4'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.36 0 0 0 0 0.22 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E")}
+h1,h2,h3,p,li,th,td,dt,dd{word-break:auto-phrase;overflow-wrap:break-word}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(250,248,242,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0 36px;height:62px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-orb{width:26px;height:26px;display:block}
+.nav-wm{font-family:'Sora',sans-serif;font-size:18px;font-weight:800;color:var(--navy);letter-spacing:-.5px}
+.nav-wm b{color:var(--accent);font-weight:800}
+.nav-logo em{font-style:normal;font-size:10.5px;font-weight:700;color:var(--muted);letter-spacing:.12em;margin-left:2px}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:500}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--accent);color:#fff !important;padding:9px 18px;border-radius:4px;font-weight:700 !important;font-size:13px;white-space:nowrap}
+
+.wrap{max-width:860px;margin:0 auto;padding:64px 28px 88px}
+.page-label{display:inline-flex;align-items:center;gap:14px;font-size:13px;font-weight:700;color:var(--accent-deep);letter-spacing:.18em;margin-bottom:14px}
+.page-label::before{content:'';width:36px;height:1px;background:rgba(30,58,102,.4)}
+h1{font-size:34px;font-weight:800;line-height:1.5;letter-spacing:.03em;margin-bottom:18px}
+.lead{font-size:16px;color:var(--muted);max-width:680px;margin-bottom:52px}
+
+h2{font-size:23px;font-weight:800;letter-spacing:.04em;margin:56px 0 20px;padding-left:14px;border-left:3px solid var(--gold-deep)}
+
+/* 流れ */
+.flow{list-style:none;counter-reset:step}
+.flow li{position:relative;padding:0 0 26px 58px;counter-increment:step}
+.flow li::before{content:counter(step);position:absolute;left:0;top:2px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(30,58,102,.4);color:var(--accent-deep);font-family:'Sora',sans-serif;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;background:#fff}
+.flow li::after{content:'';position:absolute;left:19px;top:44px;bottom:4px;width:1px;background:rgba(30,58,102,.18)}
+.flow li:last-child::after{display:none}
+.flow h3{font-size:16.5px;font-weight:700;margin-bottom:4px}
+.flow h3 em{font-style:normal;font-size:12px;font-weight:700;color:var(--gold-deep);letter-spacing:.08em;margin-left:10px}
+.flow p{font-size:14.5px;color:var(--muted);line-height:1.95}
+
+/* 条件テーブル */
+.terms-table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.terms-table th,.terms-table td{padding:18px 20px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);font-size:15px}
+.terms-table th{width:27%;background:rgba(14,27,51,.03);font-weight:700;white-space:nowrap}
+.terms-table td{color:#33405A;line-height:2}
+.terms-table tr:last-child th,.terms-table tr:last-child td{border-bottom:none}
+.terms-table td strong{color:var(--ink)}
+.hosoku{font-size:13px;color:var(--muted);margin-top:18px;line-height:1.95}
+
+/* 補助金ボックス */
+.subsidy-box{margin-top:22px;background:linear-gradient(150deg,#0E1B33,#122A52);border-radius:14px;padding:30px 32px;color:#fff}
+.subsidy-box h3{font-size:17px;font-weight:800;color:var(--gold);margin-bottom:10px;letter-spacing:.04em}
+.subsidy-box p{font-size:14.5px;color:rgba(255,255,255,.85);line-height:2}
+
+.back-cta{margin-top:64px;text-align:center}
+.back-cta a{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:14.5px;padding:14px 34px;border-radius:4px;text-decoration:none}
+.back-cta p{font-size:13.5px;color:var(--muted);margin-top:14px}
+.back-cta p a{all:unset;color:var(--accent-deep);font-weight:700;cursor:pointer}
+
+footer{background:var(--navy);padding:26px 36px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:10px}
+footer a{color:#D6C28F;text-decoration:none}
+
+@media(max-width:640px){
+  nav{padding:0 18px}
+  .nav-logo em{display:none}
+  .wrap{padding:44px 20px 64px}
+  h1{font-size:27px}
+  .terms-table th,.terms-table td{display:block;width:100%}
+  .terms-table th{border-bottom:none;padding-bottom:6px}
+  .terms-table td{padding-top:0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/ja/" class="nav-logo"><img src="../favicon.svg" alt="" class="nav-orb"><span class="nav-wm">blue<b>shift</b></span><em>地域・観光・伝統工芸のWeb制作</em></a>
+  <div class="nav-links">
+    <a href="/ja/">ホームへ戻る</a>
+    <a href="/ja/#contact" class="nav-cta">無料相談 →</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="page-label">TERMS — ご契約とお取引の流れ</div>
+  <h1>不安なく頼めるように、<br>先に全部書いておきます。</h1>
+  <p class="lead">「頼んだらいくらかかるのか」「途中でやめられるのか」「どこまで直してもらえるのか」——Web制作で一番多いご不安に、先にお答えするページです。ここに書いていないことは、ご契約前に必ずご説明します。</p>
+
+  <h2>ご契約までの流れ</h2>
+  <ol class="flow">
+    <li>
+      <h3>無料相談<em>費用はかかりません</em></h3>
+      <p>フォームまたはメールでご連絡ください。お悩みと「こうなったら嬉しい」を伺います。<strong style="color:var(--ink)">相談フォームの送信で契約が成立することはありません。</strong>売り込みもしません。</p>
+    </li>
+    <li>
+      <h3>補助金チェック<em>費用はかかりません</em></h3>
+      <p>お客様の地域・事業で使える補助金制度を調べ、活用できる場合はスケジュールごとご提案します。</p>
+    </li>
+    <li>
+      <h3>ご提案・お見積り<em>費用はかかりません</em></h3>
+      <p>サイトの構成案と、固定価格のお見積り書をお出しします。有効期限は発行から1ヶ月です。</p>
+    </li>
+    <li>
+      <h3>ご契約<em>ここで初めて契約成立</em></h3>
+      <p>お見積り内容にご承諾いただいた時点（メールでのご返信で結構です）でご契約成立となり、着手金のご請求をお送りします。</p>
+    </li>
+    <li>
+      <h3>取材・制作 → 公開</h3>
+      <p>お話を伺い、原稿・デザインを制作します。目安は2〜6週間。途中経過を共有しながら進めるので、完成間際に「思っていたのと違う」が起きにくい進め方です。</p>
+    </li>
+  </ol>
+
+  <h2>お取引の条件</h2>
+  <table class="terms-table">
+    <tr><th>契約の成立</th><td>お見積り書へのご承諾（メール可）をもって成立します。ご相談・補助金チェック・お見積りまでは無償です。</td></tr>
+    <tr><th>お支払い</th><td>着手金50%・公開時50%の2回払い。銀行振込またはクレジットカードをご利用いただけます。表示価格は税抜で、消費税は別途申し受けます。</td></tr>
+    <tr><th>キャンセル</th><td>制作着手前のキャンセルは無償です。着手後は、それまでの進行分の実費のみを申し受け、それ以外はいただきません。</td></tr>
+    <tr><th>修正</th><td>デザイン・構成の修正は<strong>3回まで無償</strong>です。誤字脱字の訂正、文言の調整、写真の差し替えなどの<strong>軽微な修正は回数に数えません</strong>——いくらでもお申し付けください。4回目以降の修正や、制作途中での大幅な方向転換は、事前にお見積りのうえで承ります。</td></tr>
+    <tr><th>著作権</th><td>制作費の全額お支払いをもって、納品物の著作権はお客様に移転します。当社は制作実績としてサイトを紹介する権利のみ保留します（非公開のご希望があれば対応します）。</td></tr>
+    <tr><th>公開後のサポート</th><td>公開後1ヶ月間の微修正は無償です。その後の更新・運用サポートは、内容に応じて別途ご提案します。</td></tr>
+    <tr><th>お客様にお願いすること</th><td>取材へのご協力（オンライン可）、原稿・デザインの各確認を2週間以内に返していただくこと。確認が長期化した場合はスケジュールを再調整します。</td></tr>
+  </table>
+
+  <div class="subsidy-box">
+    <h3>補助金を使う場合の、大事な順番</h3>
+    <p>多くの補助金は「交付決定<strong style="color:#D6C28F">前</strong>」に契約・着手した費用が補助対象外になります。だから当社では、補助金を使う案件は<strong style="color:#D6C28F">申請 → 交付決定 → ご契約・着手</strong>の順番でスケジュールを組みます。「先に作り始めたせいで補助金がもらえなかった」という事故を、仕組みで防ぎます。</p>
+  </div>
+
+  <p class="hosoku">※ 本ページはWebサイト制作等の受託業務に関するご案内です。当社マーケットレポート（通信販売）の取引条件は「<a href="../tokushoho.html" style="color:var(--accent-deep)">特定商取引法に基づく表記</a>」をご覧ください。個別のご契約内容が本ページと異なる場合は、ご契約内容が優先されます。</p>
+
+  <div class="back-cta">
+    <a href="/ja/#contact">無料相談からはじめる →</a>
+    <p>料金の目安は <a href="/ja/#pricing">料金ページ</a> をご覧ください。</p>
+  </div>
+</div>
+
+<footer>
+  <div>© 2026 Blueshift Japan合同会社</div>
+  <div><a href="/ja/">日本語トップ</a> · <a href="../tokushoho.html">特定商取引法に基づく表記</a> · <a href="../privacy.html">Privacy Policy</a></div>
+  <div><a href="mailto:ceo@blueshift-japan.com">ceo@blueshift-japan.com</a></div>
+</footer>
+
+</body>
+</html>
