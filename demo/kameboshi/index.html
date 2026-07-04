@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>KAMEBOSHI Indigo Atelier — 藍染工房 甕星 | Demo by Blueshift Japan</title>
+<meta name="description" content="A fictional indigo-dyeing atelier website. Demo site designed and built by Blueshift Japan to showcase inbound-ready multilingual web design.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Zen+Old+Mincho:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --koai:#0A1830;      /* 濃藍 deepest indigo */
+  --kon:#0F2350;       /* 紺 */
+  --ai:#165E83;        /* 藍 */
+  --hanada:#2A6E9E;    /* 縹 */
+  --kame:#A2D7DD;      /* 甕覗 palest indigo */
+  --kinari:#F5F1E6;    /* 生成り unbleached cloth */
+  --ink:#1B2536;
+  --muted:#5E6B7E;
+  --line:rgba(15,35,80,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Cormorant Garamond','Zen Old Mincho',serif;background:var(--kinari);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body .jp{font-family:'Zen Old Mincho','Noto Sans JP',serif}
+
+/* ---- language toggle ---- */
+body.en .ja{display:none !important}
+body.ja .en{display:none !important}
+body.ja{font-family:'Zen Old Mincho','Noto Sans JP',serif;line-height:1.9}
+
+/* ---- demo ribbon ---- */
+.demo-ribbon{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#0E1B33;color:rgba(255,255,255,.85);font-family:'Noto Sans JP',sans-serif;font-size:11.5px;padding:9px 16px;text-align:center;letter-spacing:.04em;border-top:1px solid rgba(162,215,221,.3)}
+.demo-ribbon a{color:#7FE0DB;font-weight:700;text-decoration:none}
+.demo-ribbon strong{color:#A2D7DD;font-weight:700;margin-right:8px}
+
+/* ---- nav ---- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 34px;height:66px;background:linear-gradient(rgba(10,24,48,.85),rgba(10,24,48,0));transition:background .3s}
+nav.scrolled{background:rgba(10,24,48,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(162,215,221,.18)}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-mark{width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(162,215,221,.7);display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 40% 32%,rgba(162,215,221,.35),rgba(10,24,48,.2) 70%)}
+.nav-mark i{width:5px;height:5px;border-radius:50%;background:#EAF4F6;box-shadow:0 0 8px 2px rgba(234,244,246,.8);font-style:normal}
+.nav-name{color:#F2F5F0;font-size:16px;letter-spacing:.24em;font-weight:600}
+.nav-name .jp{font-size:13px;letter-spacing:.3em;opacity:.85}
+.nav-right{display:flex;align-items:center;gap:22px}
+.nav-links{display:flex;gap:22px}
+.nav-links a{color:rgba(242,245,240,.75);text-decoration:none;font-size:13px;letter-spacing:.14em;font-family:'Noto Sans JP',sans-serif;font-weight:400;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.lang-switch{display:flex;border:1px solid rgba(162,215,221,.45);border-radius:20px;overflow:hidden}
+.lang-switch button{background:transparent;border:none;color:rgba(242,245,240,.6);font-family:'Noto Sans JP',sans-serif;font-size:11.5px;font-weight:700;padding:6px 13px;cursor:pointer;letter-spacing:.06em}
+body.en .lang-switch button[data-lang=en],body.ja .lang-switch button[data-lang=ja]{background:rgba(162,215,221,.9);color:#0A1830}
+
+/* ---- hero ---- */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#F2F5F0;overflow:hidden;padding:90px 24px 70px;
+  background:
+    radial-gradient(ellipse 90% 55% at 50% 115%,rgba(42,110,158,.55),transparent 62%),
+    radial-gradient(ellipse 60% 40% at 50% 108%,rgba(162,215,221,.28),transparent 60%),
+    linear-gradient(175deg,#060F22 0%,#0A1830 38%,#0F2350 68%,#165E83 108%)}
+.hero .stars{position:absolute;inset:0;background-image:
+  radial-gradient(rgba(255,255,255,.9) .7px,transparent .9px),
+  radial-gradient(rgba(255,255,255,.5) .6px,transparent .8px);
+  background-size:190px 160px,97px 83px;background-position:0 0,40px 60px;opacity:.5;pointer-events:none}
+.hero .vat-glow{position:absolute;bottom:-40vh;left:50%;transform:translateX(-50%);width:80vh;height:80vh;border-radius:50%;border:1px solid rgba(162,215,221,.22);background:radial-gradient(circle at 50% 38%,rgba(162,215,221,.14),rgba(10,24,48,.1) 70%);pointer-events:none}
+.hero .vat-glow::before{content:'';position:absolute;inset:9%;border-radius:50%;border:1px solid rgba(162,215,221,.13)}
+.hero>*{position:relative;z-index:1}
+.hero-kicker{font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.42em;text-indent:.42em;color:var(--kame);margin-bottom:30px;font-weight:500}
+.hero h1{font-weight:600;line-height:1.1;margin-bottom:26px}
+.hero h1 .en-title{display:block;font-size:64px;letter-spacing:.3em;text-indent:.3em}
+.hero h1 .jp-title{display:block;font-family:'Zen Old Mincho',serif;font-size:58px;font-weight:700;letter-spacing:.34em;text-indent:.34em}
+.hero-tag{font-size:21px;font-style:italic;color:rgba(242,245,240,.85);margin-bottom:10px}
+.hero-tag.jp{font-style:normal;font-size:17px;letter-spacing:.12em}
+.hero-sub{font-family:'Noto Sans JP',sans-serif;font-size:13px;color:rgba(242,245,240,.55);letter-spacing:.1em;margin-bottom:44px}
+.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-fill{background:rgba(234,244,246,.95);color:#0A1830;font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:13.5px;letter-spacing:.08em;padding:15px 34px;border-radius:2px;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 12px 34px -12px rgba(0,0,0,.6)}
+.btn-fill:hover{transform:translateY(-2px)}
+.btn-line{border:1px solid rgba(242,245,240,.5);color:#F2F5F0;font-family:'Noto Sans JP',sans-serif;font-weight:500;font-size:13.5px;letter-spacing:.08em;padding:15px 30px;border-radius:2px;text-decoration:none;transition:background .2s}
+.btn-line:hover{background:rgba(242,245,240,.1)}
+.scroll-cue{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);color:rgba(242,245,240,.5);font-family:'Noto Sans JP',sans-serif;font-size:10px;letter-spacing:.3em;z-index:1}
+.scroll-cue::after{content:'';display:block;width:1px;height:34px;background:linear-gradient(rgba(242,245,240,.6),transparent);margin:8px auto 0}
+
+/* ---- shared ---- */
+.wrap{max-width:1020px;margin:0 auto;padding:0 28px}
+.section{padding:96px 0}
+.sec-head{text-align:center;margin-bottom:60px}
+.sec-kicker{font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:700;letter-spacing:.36em;text-indent:.36em;color:var(--ai);margin-bottom:14px}
+.sec-head h2{font-size:40px;font-weight:600;letter-spacing:.06em;color:var(--kon)}
+.sec-head h2.jp,.sec-head .jp h2{font-family:'Zen Old Mincho',serif;font-size:32px;font-weight:700;letter-spacing:.14em}
+.sec-head .sec-lead{font-family:'Noto Sans JP',sans-serif;font-size:14.5px;color:var(--muted);max-width:640px;margin:20px auto 0;line-height:2.05}
+body.en .sec-head .sec-lead{font-family:'Cormorant Garamond',serif;font-size:17.5px;line-height:1.85}
+
+/* ---- story ---- */
+.story-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center}
+.story-visual{aspect-ratio:3/4;border-radius:4px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 86%,rgba(162,215,221,.5),transparent 44%),
+    linear-gradient(178deg,#0A1830 0%,#0F2350 40%,#165E83 78%,#2A6E9E 105%)}
+.story-visual::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.55) .6px,transparent .8px);background-size:120px 100px;opacity:.4}
+.story-visual .vat{position:absolute;bottom:-16%;left:50%;transform:translateX(-50%);width:88%;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(162,215,221,.55);background:radial-gradient(circle at 46% 34%,rgba(162,215,221,.3),rgba(6,15,34,.55) 74%)}
+.story-visual .vat::before{content:'';position:absolute;inset:10%;border-radius:50%;border:1px solid rgba(162,215,221,.3)}
+.story-visual .star{position:absolute;top:34%;left:50%;transform:translateX(-50%);width:7px;height:7px;border-radius:50%;background:#EAF4F6;box-shadow:0 0 16px 5px rgba(234,244,246,.75)}
+.story-visual figcaption{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-family:'Noto Sans JP',sans-serif;font-size:10px;letter-spacing:.26em;color:rgba(242,245,240,.55)}
+.story-text h3{font-size:30px;font-weight:600;color:var(--kon);line-height:1.45;margin-bottom:24px;letter-spacing:.04em}
+.story-text h3.jp{font-family:'Zen Old Mincho',serif;font-size:25px;font-weight:700;letter-spacing:.1em}
+.story-text p{font-size:17px;line-height:1.9;color:#33405A;margin-bottom:18px}
+body.ja .story-text p{font-family:'Noto Sans JP',sans-serif;font-size:14.5px;line-height:2.15;font-weight:400}
+.story-facts{display:flex;gap:0;margin-top:30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.story-fact{flex:1;text-align:center;padding:18px 8px}
+.story-fact+.story-fact{border-left:1px solid var(--line)}
+.sf-num{font-size:26px;font-weight:600;color:var(--ai)}
+.sf-label{font-family:'Noto Sans JP',sans-serif;font-size:10.5px;color:var(--muted);letter-spacing:.14em;margin-top:3px}
+
+/* ---- indigo shades band ---- */
+.shades{padding:0 0 96px}
+.shade-band{display:flex;border-radius:4px;overflow:hidden;height:130px;box-shadow:0 24px 50px -24px rgba(15,35,80,.45)}
+.shade{flex:1;position:relative;display:flex;align-items:flex-end;justify-content:center;padding-bottom:12px;transition:flex .35s}
+.shade:hover{flex:1.6}
+.shade span{font-family:'Noto Sans JP',sans-serif;font-size:10px;letter-spacing:.16em;color:rgba(255,255,255,.9);writing-mode:vertical-rl;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.shade.s1{background:#C4E3E6}.shade.s1 span{color:#33506B;text-shadow:none}
+.shade.s2{background:#A2D7DD}.shade.s2 span{color:#1F3D5C;text-shadow:none}
+.shade.s3{background:#5FA8C5}.shade.s4{background:#2A6E9E}.shade.s5{background:#165E83}.shade.s6{background:#1B4470}.shade.s7{background:#0F2350}.shade.s8{background:#0A1830}
+.shade-note{text-align:center;font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--muted);letter-spacing:.1em;margin-top:18px}
+body.en .shade-note{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;letter-spacing:.03em}
+
+/* ---- process ---- */
+.process{background:linear-gradient(178deg,#0A1830 0%,#0F2350 55%,#13355C 100%);color:#F2F5F0;position:relative;overflow:hidden}
+.process::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.5) .6px,transparent .8px);background-size:150px 120px;opacity:.3;pointer-events:none}
+.process .wrap{position:relative;z-index:1}
+.process .sec-head h2{color:#F2F5F0}
+.process .sec-kicker{color:var(--kame)}
+.process .sec-head .sec-lead{color:rgba(242,245,240,.6)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.proc-step{text-align:center;padding:10px 6px}
+.proc-circle{width:104px;height:104px;border-radius:50%;margin:0 auto 22px;border:1px solid rgba(162,215,221,.5);display:flex;align-items:center;justify-content:center;position:relative}
+.proc-circle .kanji{font-family:'Zen Old Mincho',serif;font-size:34px;font-weight:700;color:#EAF4F6}
+.proc-circle::after{content:attr(data-step);position:absolute;top:-7px;right:-2px;font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--kame);letter-spacing:.1em}
+.proc-step .c1{background:radial-gradient(circle at 42% 34%,rgba(120,150,110,.35),rgba(10,24,48,.3) 75%)}
+.proc-step .c2{background:radial-gradient(circle at 42% 34%,rgba(162,215,221,.3),rgba(10,24,48,.3) 75%)}
+.proc-step .c3{background:radial-gradient(circle at 42% 34%,rgba(42,110,158,.5),rgba(10,24,48,.3) 75%)}
+.proc-step .c4{background:radial-gradient(circle at 42% 34%,rgba(95,168,197,.55),rgba(15,35,80,.5) 75%)}
+.proc-step h3{font-size:19px;font-weight:600;letter-spacing:.08em;margin-bottom:4px}
+.proc-step h3.jp{font-family:'Zen Old Mincho',serif;font-size:17px}
+.proc-step .proc-jp{font-family:'Noto Sans JP',sans-serif;font-size:10.5px;letter-spacing:.24em;color:var(--kame);margin-bottom:12px}
+.proc-step p{font-family:'Noto Sans JP',sans-serif;font-size:12.5px;line-height:1.95;color:rgba(242,245,240,.68)}
+body.en .proc-step p{font-family:'Cormorant Garamond',serif;font-size:15px;line-height:1.7}
+.proc-quote{margin-top:56px;text-align:center;font-size:23px;font-style:italic;color:rgba(242,245,240,.85);line-height:1.7}
+.proc-quote.jp{font-style:normal;font-family:'Zen Old Mincho',serif;font-size:19px;letter-spacing:.1em}
+.proc-quote small{display:block;font-family:'Noto Sans JP',sans-serif;font-style:normal;font-size:11px;letter-spacing:.2em;color:var(--kame);margin-top:12px}
+
+/* ---- products ---- */
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prod-card{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.prod-card:hover{transform:translateY(-5px);box-shadow:0 22px 44px -20px rgba(15,35,80,.35)}
+.prod-swatch{aspect-ratio:1;position:relative}
+.prod-swatch.shibori{background:
+  radial-gradient(circle 9px at 25% 25%,#EAF4F6 3px,rgba(234,244,246,.25) 6px,transparent 9px),
+  radial-gradient(circle 9px at 75% 25%,#EAF4F6 3px,rgba(234,244,246,.25) 6px,transparent 9px),
+  radial-gradient(circle 9px at 50% 50%,#EAF4F6 3px,rgba(234,244,246,.25) 6px,transparent 9px),
+  radial-gradient(circle 9px at 25% 75%,#EAF4F6 3px,rgba(234,244,246,.25) 6px,transparent 9px),
+  radial-gradient(circle 9px at 75% 75%,#EAF4F6 3px,rgba(234,244,246,.25) 6px,transparent 9px),
+  linear-gradient(160deg,#165E83,#0F2350);
+  background-size:86px 86px,86px 86px,86px 86px,86px 86px,86px 86px,100% 100%}
+.prod-swatch.gradient{background:linear-gradient(178deg,#F2EFE4 0%,#C4E3E6 26%,#5FA8C5 52%,#165E83 76%,#0A1830 100%)}
+.prod-swatch.stripe{background:repeating-linear-gradient(90deg,#0F2350 0 18px,#1B4470 18px 22px,#EAF1EE 22px 30px,#165E83 30px 52px)}
+.prod-swatch.sekka{background:
+  conic-gradient(from 0deg at 50% 50%,#0F2350 0 30deg,#5FA8C5 30deg 60deg,#EAF4F6 60deg 90deg,#165E83 90deg 120deg,#0F2350 120deg 150deg,#A2D7DD 150deg 180deg,#0F2350 180deg 210deg,#5FA8C5 210deg 240deg,#EAF4F6 240deg 270deg,#165E83 270deg 300deg,#0F2350 300deg 330deg,#A2D7DD 330deg 360deg);
+  background-size:120px 120px;background-position:center}
+.prod-info{padding:20px 20px 22px}
+.prod-info h3{font-size:19px;font-weight:600;letter-spacing:.04em;color:var(--kon)}
+.prod-info .p-jp{font-family:'Noto Sans JP',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--muted);margin:3px 0 10px}
+.prod-info p{font-family:'Noto Sans JP',sans-serif;font-size:12px;line-height:1.85;color:var(--muted);margin-bottom:12px}
+body.en .prod-info p{font-family:'Cormorant Garamond',serif;font-size:14.5px;line-height:1.6}
+.prod-price{font-size:16px;font-weight:600;color:var(--ai);letter-spacing:.04em}
+.prod-note{text-align:center;font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--muted);margin-top:26px;letter-spacing:.06em}
+
+/* ---- experience ---- */
+.exp{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.exp-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.exp-visual{aspect-ratio:4/3;border-radius:4px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 30% 40%,rgba(234,244,246,.2) 0 34px,transparent 35px),
+    radial-gradient(circle at 68% 62%,rgba(234,244,246,.16) 0 26px,transparent 27px),
+    linear-gradient(150deg,#2A6E9E 0%,#165E83 45%,#0F2350 100%)}
+.exp-visual::before{content:'';position:absolute;left:12%;right:12%;top:46%;height:1px;background:rgba(234,244,246,.4)}
+.exp-visual::after{content:'';position:absolute;left:22%;top:20%;width:56%;height:52%;border-radius:2px;background:linear-gradient(178deg,#EAF1EE 0%,#C4E3E6 42%,#5FA8C5 72%,#165E83 100%);opacity:.92;box-shadow:0 14px 30px -12px rgba(0,0,0,.4);transform:rotate(-2deg)}
+.exp-visual figcaption{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:'Noto Sans JP',sans-serif;font-size:10px;letter-spacing:.24em;color:rgba(242,245,240,.65);z-index:1}
+.exp-copy h3{font-size:31px;font-weight:600;color:var(--kon);line-height:1.4;margin-bottom:18px;letter-spacing:.03em}
+.exp-copy h3.jp{font-family:'Zen Old Mincho',serif;font-size:25px;font-weight:700;letter-spacing:.1em}
+.exp-copy>p{font-size:17px;line-height:1.85;color:#33405A;margin-bottom:24px}
+body.ja .exp-copy>p{font-family:'Noto Sans JP',sans-serif;font-size:14px;line-height:2.1}
+.exp-detail{border:1px solid var(--line);border-radius:4px;background:var(--kinari);padding:22px 26px;margin-bottom:26px}
+.exp-detail dl{display:grid;grid-template-columns:auto 1fr;gap:8px 22px;font-family:'Noto Sans JP',sans-serif;font-size:13px}
+.exp-detail dt{font-weight:700;color:var(--ai);letter-spacing:.06em;white-space:nowrap}
+.exp-detail dd{color:#33405A}
+.btn-indigo{display:inline-block;background:var(--kon);color:#F2F5F0;font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:13.5px;letter-spacing:.1em;padding:15px 36px;border-radius:2px;text-decoration:none;transition:background .2s,transform .2s;box-shadow:0 12px 30px -12px rgba(15,35,80,.6)}
+.btn-indigo:hover{background:var(--ai);transform:translateY(-2px)}
+.exp-en-ok{display:inline-flex;align-items:center;gap:8px;margin-left:16px;font-family:'Noto Sans JP',sans-serif;font-size:11.5px;color:var(--ai);font-weight:700;letter-spacing:.08em}
+
+/* ---- visit ---- */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.visit-info h3{font-size:28px;font-weight:600;color:var(--kon);margin-bottom:20px;letter-spacing:.04em}
+.visit-info h3.jp{font-family:'Zen Old Mincho',serif;font-size:23px;font-weight:700;letter-spacing:.12em}
+.visit-table{width:100%;border-collapse:collapse;font-family:'Noto Sans JP',sans-serif;font-size:13.5px}
+.visit-table th,.visit-table td{padding:13px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.visit-table th{width:34%;color:var(--ai);font-weight:700;letter-spacing:.06em;white-space:nowrap}
+.visit-table td{color:#33405A;line-height:1.8}
+.visit-map{aspect-ratio:1/1;border-radius:4px;border:1px solid var(--line);position:relative;overflow:hidden;background:
+  linear-gradient(rgba(15,35,80,.05) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(15,35,80,.05) 1px,transparent 1px),
+  #EDF2EE;background-size:44px 44px}
+.visit-map .river{position:absolute;left:-10%;right:-10%;top:52%;height:52px;background:linear-gradient(#A2D7DD,#5FA8C5);transform:rotate(-7deg);opacity:.75}
+.visit-map .pin{position:absolute;top:33%;left:54%;transform:translate(-50%,-50%);text-align:center}
+.visit-map .pin i{display:block;width:16px;height:16px;border-radius:50% 50% 50% 0;background:var(--kon);transform:rotate(-45deg);margin:0 auto 6px;box-shadow:0 6px 14px -4px rgba(15,35,80,.6)}
+.visit-map .pin span{font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:700;color:var(--kon);letter-spacing:.1em;background:rgba(255,255,255,.85);padding:4px 10px;border-radius:2px}
+.visit-map figcaption{position:absolute;bottom:12px;right:14px;font-family:'Noto Sans JP',sans-serif;font-size:10px;color:var(--muted);letter-spacing:.1em}
+
+/* ---- footer ---- */
+.site-footer{background:#0A1830;color:rgba(242,245,240,.6);padding:64px 28px 92px;text-align:center;position:relative;overflow:hidden}
+.site-footer::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.5) .6px,transparent .8px);background-size:160px 130px;opacity:.25;pointer-events:none}
+.site-footer>*{position:relative;z-index:1}
+.footer-mark{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(162,215,221,.6);margin:0 auto 18px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 40% 32%,rgba(162,215,221,.3),rgba(10,24,48,.2) 70%)}
+.footer-mark i{width:6px;height:6px;border-radius:50%;background:#EAF4F6;box-shadow:0 0 10px 3px rgba(234,244,246,.8);font-style:normal}
+.footer-name{font-size:20px;letter-spacing:.3em;text-indent:.3em;color:#F2F5F0;margin-bottom:6px}
+.footer-name .jp{font-family:'Zen Old Mincho',serif;font-size:16px;letter-spacing:.34em}
+.footer-addr{font-family:'Noto Sans JP',sans-serif;font-size:11.5px;letter-spacing:.12em;margin-bottom:34px}
+.footer-credit{display:inline-block;border:1px solid rgba(162,215,221,.4);border-radius:4px;padding:16px 26px;font-family:'Noto Sans JP',sans-serif;font-size:12px;line-height:2;color:rgba(242,245,240,.75);background:rgba(162,215,221,.06)}
+.footer-credit a{color:#7FE0DB;font-weight:700;text-decoration:none}
+.footer-credit strong{color:#A2D7DD}
+
+@media(max-width:880px){
+  nav{padding:0 16px}
+  .nav-links{display:none}
+  .hero h1 .en-title{font-size:38px}
+  .hero h1 .jp-title{font-size:40px}
+  .hero-tag{font-size:17px}
+  .section{padding:64px 0}
+  .story-grid,.exp-grid,.visit-grid{grid-template-columns:1fr;gap:34px}
+  .proc-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .prod-grid{grid-template-columns:1fr 1fr}
+  .sec-head h2{font-size:28px}
+  .shade-band{height:100px}
+  .exp-en-ok{margin-left:0;margin-top:12px;display:flex}
+}
+</style>
+</head>
+<body class="en">
+
+<nav id="nav">
+  <a href="#" class="nav-brand">
+    <span class="nav-mark"><i></i></span>
+    <span class="nav-name"><span class="en">KAMEBOSHI</span><span class="jp ja">藍染工房 甕星</span></span>
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#story"><span class="en">Story</span><span class="ja">工房の物語</span></a>
+      <a href="#craft"><span class="en">Craft</span><span class="ja">染めの工程</span></a>
+      <a href="#works"><span class="en">Works</span><span class="ja">作品</span></a>
+      <a href="#experience"><span class="en">Experience</span><span class="ja">藍染体験</span></a>
+      <a href="#visit"><span class="en">Visit</span><span class="ja">アクセス</span></a>
+    </div>
+    <div class="lang-switch">
+      <button data-lang="en" onclick="setLang('en')">EN</button>
+      <button data-lang="ja" onclick="setLang('ja')">日本語</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="stars"></div>
+  <div class="vat-glow"></div>
+  <div class="hero-kicker"><span class="en">INDIGO DYEING ATELIER — EST. 1892</span><span class="ja">創業明治二十五年 — 藍染工房</span></div>
+  <h1>
+    <span class="en en-title">KAMEBOSHI</span>
+    <span class="ja jp-title">甕星</span>
+  </h1>
+  <p class="hero-tag en">A star sleeps at the bottom of the vat.</p>
+  <p class="hero-tag jp ja">甕の底に、星が眠っている。</p>
+  <p class="hero-sub"><span class="en">Hand-dyed Japan Blue from the Yoshino River valley, Tokushima</span><span class="ja">徳島・吉野川のほとりで、手仕事の「ジャパン・ブルー」を染めています</span></p>
+  <div class="hero-cta">
+    <a href="#experience" class="btn-fill"><span class="en">Book a Dyeing Experience</span><span class="ja">藍染体験を予約する</span></a>
+    <a href="#story" class="btn-line"><span class="en">Our Story</span><span class="ja">工房の物語を読む</span></a>
+  </div>
+  <div class="scroll-cue">SCROLL</div>
+</header>
+
+<!-- STORY -->
+<section class="section" id="story">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker"><span class="en">OUR STORY</span><span class="ja">工房の物語</span></div>
+      <h2><span class="en">The color the world calls Japan Blue</span><span class="ja jp" style="font-family:'Zen Old Mincho',serif">世界が「ジャパン・ブルー」と<br>呼んだ色</span></h2>
+    </div>
+    <div class="story-grid">
+      <figure class="story-visual">
+        <div class="vat"></div>
+        <div class="star"></div>
+        <figcaption><span class="en">THE DYE VAT AT NIGHT</span><span class="ja">夜の藍甕</span></figcaption>
+      </figure>
+      <div class="story-text">
+        <h3 class="en">Four generations,<br>twelve living vats.</h3>
+        <h3 class="jp ja">四代、百三十年。<br>十二の甕が生きている。</h3>
+        <p class="en">When foreign visitors first arrived in Meiji-era Japan, they were struck by a single color: the deep, living blue worn by farmers and merchants alike. They named it <em>Japan Blue</em> — before Mt. Fuji, before the cherry blossoms, this was Japan's first impression on the world.</p>
+        <p class="en">Our atelier has fermented natural <em>sukumo</em> indigo beside the Yoshino River since 1892. The name Kameboshi — "the star in the vat" — comes from a story our founder told: that on clear nights, a star settles on the surface of the dye and sleeps at the bottom of the vat, lending the cloth its depth.</p>
+        <p class="en">Each of our twelve vats is alive — a fermentation tended by hand, morning and night, every day of the year. No two days, and no two blues, are ever the same.</p>
+        <p class="ja">明治のはじめ、日本を訪れた外国人たちは、農夫も商人も身にまとうその深い青に目を奪われ、「ジャパン・ブルー」と呼びました。富士より先に、桜より先に、藍の青こそが世界の見た最初の日本でした。</p>
+        <p class="ja">甕星は明治二十五年より、吉野川のほとりで天然灰汁発酵建てによる藍染を続けてきた工房です。屋号の由来は、初代が残したひとつの言い伝え——「晴れた夜、藍甕の水面に星がおりてきて、甕の底で眠る。だからうちの藍は深い」。</p>
+        <p class="ja">十二本の藍甕は、いまも毎朝毎晩、手でかき混ぜて守る「生きた発酵」。同じ日はふたつとなく、同じ青もふたつとありません。</p>
+        <div class="story-facts">
+          <div class="story-fact"><div class="sf-num">1892</div><div class="sf-label"><span class="en">FOUNDED</span><span class="ja">創業</span></div></div>
+          <div class="story-fact"><div class="sf-num">4<span style="font-size:15px">th</span></div><div class="sf-label"><span class="en">GENERATION</span><span class="ja">四代目当主</span></div></div>
+          <div class="story-fact"><div class="sf-num">12</div><div class="sf-label"><span class="en">LIVING VATS</span><span class="ja">藍甕</span></div></div>
+          <div class="story-fact"><div class="sf-num">100%</div><div class="sf-label"><span class="en">NATURAL SUKUMO</span><span class="ja">天然蒅・化学染料不使用</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHADES BAND -->
+<section class="shades">
+  <div class="wrap">
+    <div class="shade-band">
+      <div class="shade s1"><span>瓶覗 kamenozoki</span></div>
+      <div class="shade s2"><span>水浅葱 mizuasagi</span></div>
+      <div class="shade s3"><span>浅葱 asagi</span></div>
+      <div class="shade s4"><span>縹 hanada</span></div>
+      <div class="shade s5"><span>藍 ai</span></div>
+      <div class="shade s6"><span>紺 kon</span></div>
+      <div class="shade s7"><span>濃紺 nokon</span></div>
+      <div class="shade s8"><span>留紺 tomekon</span></div>
+    </div>
+    <p class="shade-note"><span class="en">Japanese has more than forty names for the blues of indigo — from "a glimpse into the vat" to "the deepest stay-blue." How many times the cloth meets the vat decides its name.</span><span class="ja">藍の青には四十八色の名があるといわれます。「瓶覗」から「留紺」まで——布が甕をくぐった回数が、色の名前を決めます。</span></p>
+  </div>
+</section>
+
+<!-- CRAFT / PROCESS -->
+<section class="section process" id="craft">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker"><span class="en">THE CRAFT</span><span class="ja">染めの工程</span></div>
+      <h2><span class="en">Dyed by hand, turned blue by the wind</span><span class="ja jp" style="font-family:'Zen Old Mincho',serif">手が染めて、風が青にする</span></h2>
+      <p class="sec-lead"><span class="en">Natural indigo is not painted onto cloth — it is grown, fermented, and coaxed. The whole cycle takes more than a year before a single cloth is dyed.</span><span class="ja">天然藍は、布に「塗る」色ではありません。育て、発酵させ、機嫌をとりながら建てる色です。一枚の布を染めるまでに、一年以上の時間が流れています。</span></p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-step">
+        <div class="proc-circle c1" data-step="01"><span class="kanji">蒅</span></div>
+        <h3 class="en">Sukumo</h3><h3 class="jp ja">蒅づくり</h3>
+        <div class="proc-jp"><span class="en">FERMENTED INDIGO LEAVES</span><span class="ja">SUKUMO</span></div>
+        <p><span class="en">Indigo leaves are harvested in summer, then fermented for a hundred days through autumn — turned by hand, watered, and rested until they become sukumo.</span><span class="ja">夏に刈った藍の葉を、秋から百日かけて発酵。切り返しと水打ちを重ね、藍染の原料「蒅」に育てます。</span></p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-circle c2" data-step="02"><span class="kanji">建</span></div>
+        <h3 class="en">Aidate</h3><h3 class="jp ja">藍建て</h3>
+        <div class="proc-jp"><span class="en">WAKING THE VAT</span><span class="ja">AIDATE</span></div>
+        <p><span class="en">Sukumo meets wood-ash lye in the vat. For days the master reads its bubbles, scent, and color — until the indigo "wakes" and the vat is alive.</span><span class="ja">蒅と灰汁を甕で合わせ、泡と香りと色を毎日読みながら数日。藍が「目を覚ます」と、甕は生き始めます。</span></p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-circle c3" data-step="03"><span class="kanji">染</span></div>
+        <h3 class="en">Dyeing</h3><h3 class="jp ja">染め</h3>
+        <div class="proc-jp"><span class="en">DIP AFTER DIP</span><span class="ja">SOME</span></div>
+        <p><span class="en">Cloth is dipped, wrung, and dipped again — five, ten, twenty times. Depth cannot be hurried; it is layered one bath at a time.</span><span class="ja">浸けて、絞って、また浸ける。五回、十回、二十回。深い色は急げません。一度ずつ、静かに重ねるだけです。</span></p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-circle c4" data-step="04"><span class="kanji">風</span></div>
+        <h3 class="en">The Air</h3><h3 class="jp ja">風にさらす</h3>
+        <div class="proc-jp"><span class="en">GREEN TURNS TO BLUE</span><span class="ja">KAZE</span></div>
+        <p><span class="en">Cloth leaves the vat green. Then, as it meets the air, the green turns to blue before your eyes — the moment every visitor gasps at.</span><span class="ja">甕から上げた布は、緑色。それが風に触れたとたん、みるみる青に変わっていきます。誰もが息をのむ瞬間です。</span></p>
+      </div>
+    </div>
+    <p class="proc-quote en">"We don't dye the cloth. The vat does.<br>We just keep the vat happy."<small>— THE FOURTH-GENERATION MASTER</small></p>
+    <p class="proc-quote jp ja">「染めるのは、私ではなく甕です。<br>私の仕事は、甕の機嫌をとることだけ」<small>— 四代目当主</small></p>
+  </div>
+</section>
+
+<!-- WORKS / PRODUCTS -->
+<section class="section" id="works">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker"><span class="en">WORKS</span><span class="ja">作品</span></div>
+      <h2><span class="en">Blue that deepens with you</span><span class="ja jp" style="font-family:'Zen Old Mincho',serif">使うほどに、育つ青</span></h2>
+      <p class="sec-lead"><span class="en">Natural indigo does not fade — it matures. Each piece is dyed to order in our vats and shipped worldwide.</span><span class="ja">天然藍は色褪せるのではなく、育ちます。作品はすべて工房の甕で一点ずつ染め、海外発送も承ります。</span></p>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card">
+        <div class="prod-swatch shibori"></div>
+        <div class="prod-info">
+          <h3><span class="en">Tenugui</span><span class="ja jp">手ぬぐい</span></h3>
+          <div class="p-jp"><span class="en">SHIBORI HAND TOWEL</span><span class="ja">絞り染め</span></div>
+          <p><span class="en">The everyday classic — hand-tied shibori dots, dyed eight times.</span><span class="ja">暮らしの定番。手括りの絞り模様を、八回染めで。</span></p>
+          <div class="prod-price">¥2,200</div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-swatch gradient"></div>
+        <div class="prod-info">
+          <h3><span class="en">Stole</span><span class="ja jp">大判ストール</span></h3>
+          <div class="p-jp"><span class="en">GRADATION-DYED COTTON-SILK</span><span class="ja">段染め・綿シルク</span></div>
+          <p><span class="en">Dip-dyed from pale kamenozoki to midnight tomekon.</span><span class="ja">瓶覗から留紺まで、甕をくぐる回数で描くグラデーション。</span></p>
+          <div class="prod-price">¥13,200</div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-swatch stripe"></div>
+        <div class="prod-info">
+          <h3><span class="en">Noren</span><span class="ja jp">暖簾</span></h3>
+          <div class="p-jp"><span class="en">DOORWAY CURTAIN</span><span class="ja">縞染め</span></div>
+          <p><span class="en">A striped doorway curtain that turns any entrance into a threshold.</span><span class="ja">くぐるたびに背筋が伸びる、玄関の一枚。</span></p>
+          <div class="prod-price">¥19,800</div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-swatch sekka"></div>
+        <div class="prod-info">
+          <h3><span class="en">Sekka Shirt</span><span class="ja jp">雪花Tシャツ</span></h3>
+          <div class="p-jp"><span class="en">SNOW-FLOWER FOLD DYE</span><span class="ja">雪花絞り</span></div>
+          <p><span class="en">Folded and clamped before dyeing — a geometric bloom, never twice the same.</span><span class="ja">畳んで板で締めて染める幾何学の花。同じ柄は二度と出ません。</span></p>
+          <div class="prod-price">¥7,700</div>
+        </div>
+      </div>
+    </div>
+    <p class="prod-note"><span class="en">Worldwide shipping available · Tax-free for overseas visitors at the atelier shop</span><span class="ja">オンライン注文・海外発送に対応。工房売店では免税手続きも承ります。</span></p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section exp" id="experience">
+  <div class="wrap">
+    <div class="exp-grid">
+      <figure class="exp-visual">
+        <figcaption><span class="en">YOUR TENUGUI, MEETING THE AIR</span><span class="ja">あなたの一枚が、風に触れる瞬間</span></figcaption>
+      </figure>
+      <div class="exp-copy">
+        <div class="sec-kicker" style="text-align:left;text-indent:0"><span class="en">THE EXPERIENCE</span><span class="ja">藍染体験</span></div>
+        <h3 class="en">Dye your own Japan Blue —<br>and watch it turn.</h3>
+        <h3 class="jp ja">じぶんの手で染める、<br>一生ものの青。</h3>
+        <p class="en">Tie your pattern, dip your cloth into a living hundred-year vat, and lift it into the light — then watch the green turn blue in your own hands. You will take home a one-of-a-kind tenugui, and a story to tell.</p>
+        <p class="ja">模様を括り、百年生きてきた甕に布を沈め、光の中へ引き上げる。手の中で緑が青に変わる瞬間を、ぜひ体験してください。染め上げた世界に一枚の手ぬぐいは、そのままお持ち帰りいただけます。</p>
+        <div class="exp-detail">
+          <dl>
+            <dt><span class="en">Duration</span><span class="ja">所要時間</span></dt><dd><span class="en">About 90 minutes</span><span class="ja">約90分</span></dd>
+            <dt><span class="en">Sessions</span><span class="ja">開催時間</span></dt><dd><span class="en">10:00 / 14:00 daily (except Wednesdays)</span><span class="ja">毎日 10:00 / 14:00（水曜定休）</span></dd>
+            <dt><span class="en">Price</span><span class="ja">参加費</span></dt><dd><span class="en">¥5,500 per person, tenugui included</span><span class="ja">お一人 ¥5,500（手ぬぐい代込み）</span></dd>
+            <dt><span class="en">Group size</span><span class="ja">定員</span></dt><dd><span class="en">2–8 guests · children welcome (6+)</span><span class="ja">2〜8名・お子様は6歳から</span></dd>
+            <dt><span class="en">Language</span><span class="ja">言語</span></dt><dd><span class="en">English-friendly — instructions & signage in English</span><span class="ja">英語対応（説明・掲示とも）</span></dd>
+          </dl>
+        </div>
+        <div>
+          <a href="#visit" class="btn-indigo"><span class="en">Check Dates & Reserve</span><span class="ja">日程を見て予約する</span></a>
+          <span class="exp-en-ok">✓ <span class="en">Free cancellation until 48h before</span><span class="ja">48時間前までキャンセル無料</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="section" id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker"><span class="en">VISIT US</span><span class="ja">アクセス</span></div>
+      <h2><span class="en">Come to the river of indigo</span><span class="ja jp" style="font-family:'Zen Old Mincho',serif">藍の川へ、会いに来てください</span></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info">
+        <table class="visit-table">
+          <tr><th><span class="en">Address</span><span class="ja">所在地</span></th><td><span class="en">3-14 Aizome-cho, Yoshinogawa Valley, Tokushima, Japan<br><em style="color:var(--muted);font-size:11.5px">(fictional address — this is a demo site)</em></span><span class="ja">徳島県・吉野川流域 藍染町3-14<br><em style="color:var(--muted);font-size:11.5px">※架空の住所です（デモサイト）</em></span></td></tr>
+          <tr><th><span class="en">Hours</span><span class="ja">営業時間</span></th><td><span class="en">9:00–17:00, closed Wednesdays</span><span class="ja">9:00〜17:00（水曜定休）</span></td></tr>
+          <tr><th><span class="en">Getting here</span><span class="ja">交通</span></th><td><span class="en">25 min by taxi from JR Tokushima Sta. · 40 min from Tokushima Awaodori Airport · Free parking</span><span class="ja">JR徳島駅からタクシー25分／徳島阿波おどり空港から40分／駐車場あり</span></td></tr>
+          <tr><th><span class="en">Shop</span><span class="ja">売店</span></th><td><span class="en">Atelier shop with tax-free service · cards & mobile pay accepted</span><span class="ja">工房売店あり（免税対応・各種キャッシュレス可）</span></td></tr>
+          <tr><th><span class="en">Reservation</span><span class="ja">ご予約</span></th><td><span class="en">Online booking & inquiries: hello@kameboshi-indigo.example</span><span class="ja">オンライン予約・お問い合わせ：hello@kameboshi-indigo.example</span></td></tr>
+        </table>
+      </div>
+      <figure class="visit-map">
+        <div class="river"></div>
+        <div class="pin"><i></i><span><span class="en">KAMEBOSHI</span><span class="ja">藍染工房 甕星</span></span></div>
+        <figcaption><span class="en">ILLUSTRATIVE MAP (DEMO)</span><span class="ja">イメージ地図（デモ）</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-mark"><i></i></div>
+  <div class="footer-name"><span class="en">KAMEBOSHI</span><span class="jp ja">藍染工房 甕星</span></div>
+  <p class="footer-addr"><span class="en">Indigo Dyeing Atelier · Tokushima, Japan · Est. 1892 (fictional)</span><span class="ja">藍染工房 甕星 · 徳島 · 創業明治二十五年（架空）</span></p>
+  <div class="footer-credit">
+    <span class="en"><strong>This is a demo website.</strong> "Kameboshi" is a fictional atelier created to showcase our inbound-ready web design.<br>Designed & built by <a href="/ja/">Blueshift Japan</a> — websites that bridge local Japan and the world.</span>
+    <span class="ja"><strong>このサイトはデモサイトです。</strong>「藍染工房 甕星」は制作品質をご覧いただくための架空の工房です。<br>企画・制作：<a href="/ja/">Blueshift Japan合同会社</a> — 地域と世界をつなぐWeb制作</span>
+  </div>
+</footer>
+
+<div class="demo-ribbon">
+  <strong>DEMO</strong><span class="en">A fictional atelier, built to show what we can make for you — <a href="/ja/">Blueshift Japan</a></span><span class="ja">架空の工房のデモサイトです。制作のご相談は <a href="/ja/">Blueshift Japan</a> へ</span>
+</div>
+
+<script>
+function setLang(l){
+  document.body.className=l;
+  document.documentElement.lang=l;
+  try{localStorage.setItem('kameboshi-lang',l)}catch(e){}
+}
+try{var s=localStorage.getItem('kameboshi-lang');if(s==='ja'||s==='en')setLang(s)}catch(e){}
+var nav=document.getElementById('nav');
+addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>40)},{passive:true});
+</script>
+</body>
+</html>
