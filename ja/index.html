@@ -21,7 +21,11 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Zen Old Mincho','Hiragino Mincho ProN',serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.8}
+body{font-family:'Zen Old Mincho','Hiragino Mincho ProN',serif;color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.8;
+  background-color:#F9F5EA;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.011 0.016' numOctaves='3' seed='11'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.46 0 0 0 0 0.39 0 0 0 0 0.24 0 0 0 0.055 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='4'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.36 0 0 0 0 0.22 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E")}
 .serif{font-family:'Zen Old Mincho',serif}
 
 /* NAV */
@@ -71,10 +75,11 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,248,242,.94);backdrop-
 .bridge-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:32px 28px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
 .bridge-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(14,27,51,.25)}
 .bridge-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--ai),var(--teal))}
+.bridge-photo{height:150px;margin:-32px -28px 22px;background-size:cover;background-position:center;border-bottom:1px solid var(--line)}
 .bridge-num{font-family:'Sora',sans-serif;font-size:13px;font-weight:800;color:var(--teal-deep);letter-spacing:.14em;margin-bottom:14px}
 .bridge-card h3{font-family:'Zen Old Mincho',serif;font-size:21px;font-weight:800;margin-bottom:12px;letter-spacing:.04em}
 .bridge-card p{font-size:14px;color:var(--muted);line-height:1.95}
-.bridge-story{margin-top:44px;background:linear-gradient(150deg,#0E1B33,#14355F);border-radius:16px;padding:40px 44px;color:#fff;position:relative;overflow:hidden}
+.bridge-story{margin-top:44px;background:linear-gradient(rgba(14,27,51,.85),rgba(16,36,70,.88)),url('img/a_fuji_lake.jpg') center/cover;border-radius:16px;padding:40px 44px;color:#fff;position:relative;overflow:hidden}
 .bridge-story::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.3) .8px,transparent .9px);background-size:96px 78px;opacity:.25;pointer-events:none}
 .bridge-story>*{position:relative;z-index:1}
 .bridge-story h3{font-family:'Zen Old Mincho',serif;font-size:20px;font-weight:800;margin-bottom:14px;letter-spacing:.05em}
@@ -83,7 +88,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,248,242,.94);backdrop-
 
 /* SERVICES */
 .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.svc-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:36px 32px}
+.svc-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:36px 32px;overflow:hidden}
+.svc-photo{height:170px;margin:-36px -32px 24px;background-size:cover;background-position:center;border-bottom:1px solid var(--line)}
 .svc-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;padding:5px 14px;border-radius:20px;margin-bottom:18px}
 .svc-card.inbound .svc-tag{background:rgba(27,58,107,.09);color:var(--ai);border:1px solid rgba(27,58,107,.25)}
 .svc-card.domestic .svc-tag{background:var(--teal-wash);color:var(--teal-deep);border:1px solid rgba(30,58,102,.3)}
@@ -305,16 +311,19 @@ h1,h2,h3,p,li,dt,dd,th,td,.hero-badge,.section-label,.proof-label,.price-for,.sv
 
     <div class="bridge-grid">
       <div class="bridge-card">
+        <div class="bridge-photo" style="background-image:url('img/a_miyajima.jpg')" role="img" aria-label="宮島の大鳥居（藍摺調加工）"></div>
         <div class="bridge-num">BRIDGE 01</div>
         <h3>世界と、地域をつなぐ</h3>
         <p>外国人観光客が「行きたい」と思う瞬間は、日本人が想像する瞬間と違います。海外の目線で設計した多言語サイト・広告で、地域の宿・食・体験・工芸を世界の旅行者に届けます。</p>
       </div>
       <div class="bridge-card">
+        <div class="bridge-photo" style="background-image:url('img/a_ginzan_onsen.jpg')" role="img" aria-label="銀山温泉の雪夜（藍摺調加工）"></div>
         <div class="bridge-num">BRIDGE 02</div>
         <h3>地域と、日本をつなぐ</h3>
         <p>その土地の観光資源、職人の逸品、美味しいもの、ふるさと納税の返礼品。地域の外にいる日本中の人へ、「知られていないだけの名品」が届くページをつくります。</p>
       </div>
       <div class="bridge-card">
+        <div class="bridge-photo" style="background-image:url('img/a_wagasa2.jpg')" role="img" aria-label="和傘の展示（藍摺調加工）"></div>
         <div class="bridge-num">BRIDGE 03</div>
         <h3>伝統を、未来につなぐ</h3>
         <p>職人の技と物語は、記録され、発信されなければ、静かに消えていきます。伝統工芸や地域産業のブランドサイトを通じて、その価値を次の世代と新しい顧客へつなぎます。</p>
@@ -337,6 +346,7 @@ h1,h2,h3,p,li,dt,dd,th,td,.hero-badge,.section-label,.proof-label,.price-for,.sv
 
     <div class="svc-grid">
       <div class="svc-card inbound">
+        <div class="svc-photo" style="background-image:url('img/a_fuji_pagoda.jpg')" role="img" aria-label="富士山と新倉山浅間公園の五重塔（藍摺調加工）"></div>
         <span class="svc-tag">FOR THE WORLD — インバウンド向け</span>
         <h3>多言語サイト・海外向けPR</h3>
         <div class="svc-en">MULTILINGUAL WEBSITES & GLOBAL PROMOTION</div>
@@ -349,6 +359,7 @@ h1,h2,h3,p,li,dt,dd,th,td,.hero-badge,.section-label,.proof-label,.price-for,.sv
         </ul>
       </div>
       <div class="svc-card domestic">
+        <div class="svc-photo" style="background-image:url('img/a_sakura_castle.jpg')" role="img" aria-label="弘前城の夜桜と花筏（藍摺調加工）"></div>
         <span class="svc-tag">FOR JAPAN — 国内向け</span>
         <h3>観光・特産品・工芸のサイト制作</h3>
         <div class="svc-en">TOURISM, LOCAL PRODUCTS & CRAFTS</div>
@@ -618,6 +629,7 @@ h1,h2,h3,p,li,dt,dd,th,td,.hero-badge,.section-label,.proof-label,.price-for,.sv
   <div>© 2026 Blueshift Japan合同会社 · <a href="/ja/">blueshift-japan.com/ja</a></div>
   <div><a href="../tokushoho.html">特定商取引法に基づく表記</a> · <a href="../privacy.html">Privacy Policy</a> · <a href="/">English Site</a></div>
   <div><a href="mailto:ceo@blueshift-japan.com">ceo@blueshift-japan.com</a></div>
+  <div style="width:100%;font-size:11px;color:rgba(255,255,255,.35);line-height:1.9">写真: Wikimedia Commons — 宮島 ©Jakub Hałun (CC BY 4.0)・河口湖と富士 ©Midori (CC BY 3.0)・新倉山浅間 ©Stjepko Krehula (CC BY 4.0)・弘前城の夜桜 ©掬茶 (CC BY-SA 4.0)・和傘 ©Laitche (CC BY-SA 4.0)・銀山温泉 (CC0)。いずれも当社にて藍摺調に加工。</div>
 </footer>
 
 </body>
