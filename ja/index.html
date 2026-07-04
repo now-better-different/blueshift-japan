@@ -15,18 +15,18 @@
 :root{
   --navy:#0E1B33;--ink:#1A2333;--teal:#1E3A66;--teal-deep:#274A7E;
   --ai:#1B3A6B;--ai-deep:#122A52;
-  --bg:#FAF8F2;--surface:#FFFFFF;--muted:#5C6B80;--line:rgba(14,27,51,.1);
+  --bg:#FAF8F2;--surface:#FDFBF6;--muted:#5C6B80;--line:rgba(14,27,51,.1);
   --teal-wash:#EEF2F8;
   --gold:#D5BE8F;--gold-deep:#B99B5F;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Zen Old Mincho','Hiragino Mincho ProN',serif;color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.8;
-  background-color:#F8F3E6;
+  background-color:#F9F5EA;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.011 0.016' numOctaves='3' seed='11'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.45 0 0 0 0 0.38 0 0 0 0 0.22 0 0 0 0.10 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='300'%3E%3Cfilter id='h'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.005 0.11' numOctaves='2' seed='23'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.47 0 0 0 0 0.40 0 0 0 0 0.25 0 0 0 0.075 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23h)'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='4'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.35 0 0 0 0 0.20 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E")}
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.011 0.016' numOctaves='3' seed='11'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.45 0 0 0 0 0.38 0 0 0 0 0.22 0 0 0 0.13 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='300'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.005 0.11' numOctaves='2' seed='23'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.46 0 0 0 0 0.39 0 0 0 0 0.24 0 0 0 0.11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='4'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.4 0 0 0 0 0.33 0 0 0 0 0.18 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E")}
 .serif{font-family:'Zen Old Mincho',serif}
 
 /* NAV */
@@ -43,7 +43,11 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,248,242,.94);backdrop-
 .nav-cta:hover{transform:translateY(-1px)}
 
 /* HERO */
-.hero{position:relative;background:linear-gradient(168deg,#0E1B33 0%,#122A52 52%,#14355F 100%);color:#fff;padding:96px 32px 84px;text-align:center;overflow:hidden}
+.hero{position:relative;background-image:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.011 0.016' numOctaves='3' seed='9'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.0 0 0 0 0 0.02 0 0 0 0 0.08 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='300'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.005 0.11' numOctaves='2' seed='23'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.72 0 0 0 0 0.78 0 0 0 0 0.9 0 0 0 0.075 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='4'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.8 0 0 0 0 0.84 0 0 0 0 0.94 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+  linear-gradient(168deg,#0E1B33 0%,#122A52 52%,#14355F 100%);color:#fff;padding:96px 32px 84px;text-align:center;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 46% at 50% 108%,rgba(30,58,102,.22),transparent 68%);pointer-events:none}
 .hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.35) .8px,transparent .9px);background-size:110px 90px;opacity:.28;pointer-events:none}
 .hero>*{position:relative;z-index:1}
@@ -136,7 +140,11 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,248,242,.94);backdrop-
 .price-features{list-style:none;margin-bottom:8px}
 .price-features li{font-size:13px;padding:5px 0;display:flex;gap:8px;line-height:1.6}
 .price-features li::before{content:'✓';color:var(--teal);font-weight:700;flex-shrink:0}
-.set-plan{background:linear-gradient(150deg,#0E1B33,#122A52);border-radius:18px;padding:44px;color:#fff;position:relative;overflow:hidden}
+.set-plan{background-image:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.011 0.016' numOctaves='3' seed='9'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.0 0 0 0 0 0.02 0 0 0 0 0.08 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='300'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.005 0.11' numOctaves='2' seed='23'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.72 0 0 0 0 0.78 0 0 0 0 0.9 0 0 0 0.075 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='4'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.8 0 0 0 0 0.84 0 0 0 0 0.94 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+  linear-gradient(150deg,#0E1B33,#122A52);border-radius:18px;padding:44px;color:#fff;position:relative;overflow:hidden}
 .set-plan::before{content:'';position:absolute;top:-30%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(30,58,102,.18),transparent 65%)}
 .set-plan>*{position:relative;z-index:1}
 .set-badge{display:inline-flex;align-items:center;gap:14px;color:var(--gold);font-size:12px;font-weight:600;letter-spacing:.26em;margin-bottom:18px}
@@ -190,7 +198,11 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,248,242,.94);backdrop-
 .company-table tr:last-child th,.company-table tr:last-child td{border-bottom:none}
 
 /* CONTACT */
-.contact-section{background:linear-gradient(168deg,#0E1B33 0%,#122A52 55%,#14355F 100%);color:#fff;padding:88px 0;position:relative;overflow:hidden}
+.contact-section{background-image:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.011 0.016' numOctaves='3' seed='9'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.0 0 0 0 0 0.02 0 0 0 0 0.08 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='300'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.005 0.11' numOctaves='2' seed='23'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.72 0 0 0 0 0.78 0 0 0 0 0.9 0 0 0 0.075 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='4'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.8 0 0 0 0 0.84 0 0 0 0 0.94 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+  linear-gradient(168deg,#0E1B33 0%,#122A52 55%,#14355F 100%);color:#fff;padding:88px 0;position:relative;overflow:hidden}
 .contact-section::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.32) .8px,transparent .9px);background-size:104px 86px;opacity:.25;pointer-events:none}
 .contact-section .wrap{position:relative;z-index:1}
 .contact-section .section-label{color:#D6C28F}
@@ -268,6 +280,11 @@ footer{font-size:13px}
 
 /* 単語・文節の途中で改行しない（対応ブラウザで有効） */
 h1,h2,h3,p,li,dt,dd,th,td,.hero-badge,.section-label,.proof-label,.price-for,.svc-tag,.set-badge,.demo-kicker{word-break:auto-phrase;overflow-wrap:break-word}
+/* 奉書紙: 白カードにも和紙の質感 */
+.bridge-card,.svc-card,.why-card,.price-card,.founder-section,.company-table{background-color:var(--surface);background-image:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.011 0.016' numOctaves='3' seed='17'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.46 0 0 0 0 0.39 0 0 0 0 0.24 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='300'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.005 0.11' numOctaves='2' seed='29'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.47 0 0 0 0 0.4 0 0 0 0 0.25 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E"),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='x'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='6'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.35 0 0 0 0 0.2 0 0 0 0.055 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E")}
 </style>
 </head>
 <body>
