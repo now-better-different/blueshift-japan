@@ -22,6 +22,7 @@
 
   // 一度処理した要素を示す目印
   const MARK = "blueshiftLogo";
+  const HIDDEN_MARK = "blueshiftHidden";
 
   // ロゴのラッパー（クリックできるリンク領域）を狙うセレクタ。
   // Googleはクラス名を頻繁に変えるため、比較的安定している
@@ -41,11 +42,13 @@
 
   // リンク領域を背景画像で自社ロゴに差し替える
   function replaceContainer(el) {
-    if (el.dataset[MARK]) return;
-
-    // 中の元ロゴ（img / svg）を隠す
-    el.querySelectorAll("img, svg").forEach((child) => {
+    // 元ロゴは img / svg とは限らず div などで描かれている場合があるため、
+    // リンクの「中身をすべて」隠して、リンク自身の背景に自社ロゴを敷く。
+    // Gmailの再描画で子要素が入れ直されても追従できるよう、毎回かけ直す。
+    el.querySelectorAll("*").forEach((child) => {
+      if (child.dataset[HIDDEN_MARK]) return;
       child.style.setProperty("display", "none", "important");
+      child.dataset[HIDDEN_MARK] = "1";
     });
 
     el.style.setProperty("background-image", `url("${LOGO_URL}")`, "important");

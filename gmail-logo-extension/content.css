@@ -16,8 +16,8 @@ a[data-blueshift-logo] {
   background-size: contain !important;
 }
 
-/* 差し替え済みロゴのすぐ隣に、元アイコンの空白が残らないように */
-a[data-blueshift-logo] > svg,
-a[data-blueshift-logo] > img:not([data-blueshift-logo]) {
+/* 元ロゴは img/svg とは限らず div などで描かれる場合があるため、
+   差し替えたリンクの中身はすべて隠して背景ロゴだけを見せる */
+a[data-blueshift-logo] * {
   display: none !important;
 }
