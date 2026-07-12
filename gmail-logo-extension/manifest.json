@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Blueshift Gmail Logo",
+  "version": "1.0.1",
+  "description": "GmailのGoogle/Gmailロゴを、Blueshiftの自社ロゴに強制的に置き換えるChrome拡張機能です。",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://mail.google.com/*"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["logo.png"],
+      "matches": ["*://mail.google.com/*"]
+    }
+  ]
+}

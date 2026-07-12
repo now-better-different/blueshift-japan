@@ -1,0 +1,23 @@
+/*
+ * Blueshift Gmail Logo — 補助スタイル
+ * -------------------------------------------------------------------------
+ * ロゴの置き換え本体は content.js が行います（同梱ロゴ logo.png を使用）。
+ * このCSSは、置き換え後のロゴ表示を安定させるための補助です。
+ *
+ * ※ CSSからは拡張機能に同梱した画像URLを直接参照できないため、
+ *    背景画像の指定は content.js 側で行っています。
+ * -------------------------------------------------------------------------
+ */
+
+/* 自社ロゴに差し替えたリンク領域が潰れないようにする */
+a[data-blueshift-logo] {
+  background-repeat: no-repeat !important;
+  background-position: left center !important;
+  background-size: contain !important;
+}
+
+/* 元ロゴは img/svg とは限らず div などで描かれる場合があるため、
+   差し替えたリンクの中身はすべて隠して背景ロゴだけを見せる */
+a[data-blueshift-logo] * {
+  display: none !important;
+}
